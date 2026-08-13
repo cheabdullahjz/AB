@@ -42,10 +42,10 @@ function getValues() {
 
                 document.querySelectorAll('numberUsed');
 
-                if (isNaN(FuelConsumption) || isNaN(DistanceVal)|| isNaN(FuelVal)) {
+                if (isNaN(SpeedVal) || isNaN(DistanceVal)|| isNaN(FuelVal)) {
                         return;
                     }
-                AvailableDistance = FuelConsumption * DistanceVal*FuelVal;
+                AvailableDistance = SpeedVal * DistanceVal*FuelVal;
 
 
                 currentRow.querySelector("#AvailableDistance").innerHTML = AvailableDistance;
