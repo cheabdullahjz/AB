@@ -12,6 +12,10 @@
                 AvailableDistance = FuelConsumption * DistanceVal*FuelVal;
                 }
 
+                if (isNaN(FuelConsumption) || isNaN(DistanceVal)|| isNaN(FuelVal)) {
+                        return;
+                    }
+
 
                 currentRow.querySelector("#AvailableDistance").innerHTML = AvailableDistance;
 
