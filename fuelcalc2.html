@@ -1286,4 +1286,29 @@
 			</tr>
 		</tbody>
 	</table>
+<script>
+function getValues() {
+            var rows = document.querySelectorAll("tr.package-row");
+            rows.forEach(function (currentRow) {
+
+                var SpeedVal = Number(currentRow.querySelector('#SpeedVal').value);
+                var DistanceVal = Number(currentRow.querySelector('#DistanceVal').value);
+                var FuelVal = Number(currentRow.querySelector('#FuelVal').value);
+                var AvailableDistance = 0;
+
+                document.querySelectorAll('numberUsed');
+
+                if (isNaN(SpeedVal) || isNaN(DistanceVal)|| isNaN(FuelVal)) {
+                        return;
+                    }
+                AvailableDistance = SpeedVal * DistanceVal*FuelVal;
+
+
+                currentRow.querySelector("#AvailableDistance").innerHTML = AvailableDistance;
+
+            });
+
+        }
+</script>
+	
 </div>
