@@ -1295,16 +1295,13 @@ function getValues() {
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
                 var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
 
-				var FuelRange7 = Number(currentRow.querySelector('#FuelRange7').value);
-                var PercentUsed7 = Number(currentRow.querySelector('#PercentUsed7').value);
-                var Burned7 = Number(currentRow.querySelector('#Burned7').value);
-				var Remaining7 = Number(currentRow.querySelector('#Remaining7').value);
-                var Time7 = Number(currentRow.querySelector('#Time7').value);
-                var Cost7 = Number(currentRow.querySelector('#Cost7').value);
+				var FuelRange7 = 0;
+                var PercentUsed7 = 0;
+                var Burned7 = 0;
+				var Remaining7 =0;
+                var Time7 = 0;
+                var Cost7 = 0;
 				
-                var AvailableDistance = 0;
-
-                document.querySelectorAll('numberUsed');
 
                 if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
                         return;
