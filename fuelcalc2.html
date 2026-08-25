@@ -1252,7 +1252,7 @@
 				<td></td>
 				<td></td>
 			</tr>
-			<tr style="height: 20px">
+			<tr class="package-result7" style="height: 20px">
 				<th id="1141274793R28" style="height: 20px;" class="row-headers-background">
 					<div class="row-header-wrapper" style="line-height: 20px">29</div>
 				</th>
@@ -1313,8 +1313,10 @@ function getValues() {
 
 				FuelRange7=Journey*TotalFuel*CostLtr;
 
-
-                currentRow.querySelector("#FuelRange7").innerHTML = FuelRange7;
+				var rows = document.querySelectorAll("tr.package-result7");
+            	rows.forEach(function (currentRow) {
+                	currentRow.querySelector("#FuelRange7").innerHTML = FuelRange7;
+				});
 
             });
 
