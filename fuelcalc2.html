@@ -1258,17 +1258,17 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">36</td>
-				<td class="s10">64</td>
+				<td class="s10">[36]</td>
+				<td class="s10">[64]</td>
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">275</td>
-				<td class="s10">211</td>
-				<td class="s21">0.14</td>
-				<td class="s22">53</td>
-				<td class="s21">322</td>
-				<td class="s22">0.8</td>
-				<td class="s22">£50.06</td>
+				<td class="s10" name="FuelRange7" id="FuelRange7" class="FuelRange" >211</td>
+				<td class="s21" name="PercentUsed7" id="PercentUsed7" class="PercentUsed" >0.14</td>
+				<td class="s22" name="Burned7" id="Burned7" class="Burned" >53</td>
+				<td class="s21" name="Remaining7" id="Remaining7" class="Remaining" >322</td>
+				<td class="s22" name="Time7" id="Time7" class="Time" >0.8</td>
+				<td class="s22" name="Cost7" id="Cost7" class="Cost" >£50.06</td>
 				<td class="s5"></td>
 				<td class="s4"></td>
 				<td class="s4"></td>
@@ -1294,14 +1294,24 @@ function getValues() {
                 var Journey = Number(currentRow.querySelector('#Journey').value);
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
                 var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
+
+				var FuelRange7 = Number(currentRow.querySelector('#FuelRange7').value);
+                var PercentUsed7 = Number(currentRow.querySelector('#PercentUsed7').value);
+                var Burned7 = Number(currentRow.querySelector('#Burned7').value);
+				var Remaining7 = Number(currentRow.querySelector('#Remaining7').value);
+                var Time7 = Number(currentRow.querySelector('#Time7').value);
+                var Cost7 = Number(currentRow.querySelector('#Cost7').value);
+				
                 var AvailableDistance = 0;
 
                 document.querySelectorAll('numberUsed');
 
-                if (isNaN(SpeedVal) || isNaN(DistanceVal)|| isNaN(FuelVal)) {
+                if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
                         return;
                     }
-                AvailableDistance = SpeedVal * DistanceVal*FuelVal;
+                
+
+				FuelRange7=Journey*TotalFuel*CostLtr;
 
 
                 currentRow.querySelector("#AvailableDistance").innerHTML = AvailableDistance;
