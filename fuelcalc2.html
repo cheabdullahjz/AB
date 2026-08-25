@@ -1066,8 +1066,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">9</td>
-				<td class="s10">9</td>
+
+				<td><input type="text" name="Kn1" id="Kn1" class="form-control" value="9" /></td>
+				<td><input type="text" name="Burnltrhr1" id="Burnltrhr1" class="form-control" value="9" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">477</td>
@@ -1100,8 +1102,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">11</td>
-				<td class="s10">17</td>
+
+				<td><input type="text" name="Kn2" id="Kn2" class="form-control" value="11" /></td>
+				<td><input type="text" name="Burnltrhr2" id="Burnltrhr2" class="form-control" value="17" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">327</td>
@@ -1134,8 +1138,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">17</td>
-				<td class="s10">29</td>
+
+				<td><input type="text" name="Kn3" id="Kn3" class="form-control" value="17" /></td>
+				<td><input type="text" name="Burnltrhr3" id="Burnltrhr3" class="form-control" value="29" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">287</td>
@@ -1168,8 +1174,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">25</td>
-				<td class="s10">43</td>
+
+				<td><input type="text" name="Kn4" id="Kn4" class="form-control" value="25" /></td>
+				<td><input type="text" name="Burnltrhr4" id="Burnltrhr4" class="form-control" value="43" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">287</td>
@@ -1203,8 +1211,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">28</td>
-				<td class="s10">50</td>
+
+				<td><input type="text" name="Kn5" id="Kn5" class="form-control" value="28" /></td>
+				<td><input type="text" name="Burnltrhr5" id="Burnltrhr5" class="form-control" value="50" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">273</td>
@@ -1238,8 +1248,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">31</td>
-				<td class="s10">60</td>
+
+				<td><input type="text" name="Kn6" id="Kn6" class="form-control" value="31" /></td>
+				<td><input type="text" name="Burnltrhr6" id="Burnltrhr6" class="form-control" value="60" /></td>
+				
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">252</td>
@@ -1272,8 +1284,10 @@
 				</th>
 				<td class="s4"></td>
 				<td class="s9"></td>
-				<td class="s10">[36]</td>
-				<td class="s10">[64]</td>
+
+				<td><input type="text" name="Kn7" id="Kn7" class="form-control" value="36" /></td>
+				<td><input type="text" name="Burnltrhr7" id="Burnltrhr7" class="form-control" value="64" /></td>
+
 				<td class="s5"></td>
 				<td class="s5"></td>
 				<td class="s9">275</td>
@@ -1311,6 +1325,8 @@ function getValues() {
                 var Journey = Number(currentRow.querySelector('#Journey').value);
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
                 var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
+				
+				
 
 				var FuelRange1 = 0;
                 var PercentUsed1 = 0;
@@ -1374,39 +1390,61 @@ function getValues() {
 				FuelRange6=Journey*TotalFuel*CostLtr;
 				FuelRange7=Journey*TotalFuel*CostLtr;
 
+
 				var rows = document.querySelectorAll("tr.package-result1");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
+
+					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
+					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result2");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange2").innerHTML = FuelRange2;
+
+					var Kn2 = Number(currentRow.querySelector('#Kn2').value);
+					var Burnltrhr2 = Number(currentRow.querySelector('#Burnltrhr2').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result3");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange3").innerHTML = FuelRange3;
+
+					var Kn3 = Number(currentRow.querySelector('#Kn3').value);
+					var Burnltrhr3 = Number(currentRow.querySelector('#Burnltrhr3').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result4");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange4").innerHTML = FuelRange4;
+
+					var Kn4 = Number(currentRow.querySelector('#Kn4').value);
+					var Burnltrhr4 = Number(currentRow.querySelector('#Burnltrhr4').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result5");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange5").innerHTML = FuelRange5;
+
+					var Kn5 = Number(currentRow.querySelector('#Kn5').value);
+					var Burnltrhr5 = Number(currentRow.querySelector('#Burnltrhr5').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result6");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange6").innerHTML = FuelRange6;
+
+					var Kn6 = Number(currentRow.querySelector('#Kn6').value);
+					var Burnltrhr6 = Number(currentRow.querySelector('#Burnltrhr6').value);
 				});
 
 				var rows = document.querySelectorAll("tr.package-result7");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange7").innerHTML = FuelRange7;
+
+					var Kn7 = Number(currentRow.querySelector('#Kn7').value);
+					var Burnltrhr7 = Number(currentRow.querySelector('#Burnltrhr7').value);
 				});
 
             });
