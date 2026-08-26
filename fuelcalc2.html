@@ -505,30 +505,31 @@
 				
 				<td class="s10">375</td>
 
-				<td name="Tank1EngLtrHr2" id="Tank1EngLtrHr2" value="17"></td>
-				<td name="Tank1RangeHr2" id="Tank1RangeHr2" value="22"></td>
-				<td name="Tank1TotalRange2" id="Tank1TotalRange2" value="251"></td>
-				<td name="Tank1RangeMile2" id="Tank1RangeMile2" value="251"></td>
-				<td name="Tank1TripVol2" id="Tank1TripVol2" value="447"></td>
-				<td name="Tank1FuelCost2" id="Tank1FuelCost2" value="420.51"></td>
-				<td name="Tank1TripTime2" id="Tank1TripTime2" value="26.3"></td>
-				<td name="Tank1LtrKn2" id="Tank1LtrKn2" value="1.5"></td>
-				<td name="Tank1PoundLtr2" id="Tank1PoundLtr2" value="0.94"></td>
-				<td name="Tank1KnGall2" id="Tank1KnGall2" value="3.50"></td>
-				<td name="Tank1FuelMile2" id="Tank1FuelMile2" value="0.27"></td>
-				<td name="Tank1PoundMile2" id="Tank1PoundMile2" value="1.40"></td>
+
+				<td><input type="text" class="form-control"  name="Tank1EngLtrHr2" id="Tank1EngLtrHr2" value="17"></td>
+				<td><input type="text" class="form-control"  name="Tank1RangeHr2" id="Tank1RangeHr2" value="22"></td>
+				<td><input type="text" class="form-control"  name="Tank1TotalRange2" id="Tank1TotalRange2" value="251"></td>
+				<td><input type="text" class="form-control"  name="Tank1RangeMile2" id="Tank1RangeMile2" value="251"></td>
+				<td><input type="text" class="form-control"  name="Tank1TripVol2" id="Tank1TripVol2" value="447"></td>
+				<td><input type="text" class="form-control"  name="Tank1FuelCost2" id="Tank1FuelCost2" value="420.51"></td>
+				<td><input type="text" class="form-control"  name="Tank1TripTime2" id="Tank1TripTime2" value="26.3"></td>
+				<td><input type="text" class="form-control"  name="Tank1LtrKn2" id="Tank1LtrKn2" value="1.5"></td>
+				<td><input type="text" class="form-control"  name="Tank1PoundLtr2" id="Tank1PoundLtr2" value="0.94"></td>
+				<td><input type="text" class="form-control"  name="Tank1KnGall2" id="Tank1KnGall2" value="3.50"></td>
+				<td><input type="text" class="form-control"  name="Tank1FuelMile2" id="Tank1FuelMile2" value="0.27"></td>
+				<td><input type="text" class="form-control"  name="Tank1PoundMile2" id="Tank1PoundMile2" value="1.40"></td>
 				
 				<td class="s12"></td>
 				<td class="s12">2000</td>
 
-				<td name="Tank1ServiceHr2" id="Tank1ServiceHr2" value="0.40"></td>
-				<td name="Tank1SternHr2" id="Tank1SternHr2" value="0.35"></td>
-				<td name="Tank1EngHr2" id="Tank1EngHr2" value="4.87"></td>
-				<td name="Tank1MecTotMile2" id="Tank1MecTotMile2" value="0.49"></td>
-				<td name="Tank1TotCost2" id="Tank1TotCost2" value="1.89"></td>
+				<td><input type="text" class="form-control"  name="Tank1ServiceHr2" id="Tank1ServiceHr2" value="0.40"></td>
+				<td><input type="text" class="form-control"  name="Tank1SternHr2" id="Tank1SternHr2" value="0.35"></td>
+				<td><input type="text" class="form-control"  name="Tank1EngHr2" id="Tank1EngHr2" value="4.87"></td>
+				<td><input type="text" class="form-control"  name="Tank1MecTotMile2" id="Tank1MecTotMile2" value="0.49"></td>
+				<td><input type="text" class="form-control"  name="Tank1TotCost2" id="Tank1TotCost2" value="1.89"></td>
 				<td class="s4"></td>
-				<td name="Tank1TotCost22" id="Tank1TotCost22" value="565.36"></td>
-				<td name="Tank1Time2" id="Tank1Time2" value="26.3"></td>
+				<td><input type="text" class="form-control"  name="Tank1TotCost22" id="Tank1TotCost22" value="565.36"></td>
+				<td><input type="text" class="form-control"  name="Tank1Time2" id="Tank1Time2" value="26.3"></td>
 				
 			</tr>
 			<tr class="Tank1-row3"  style="height: 19px">
@@ -1527,9 +1528,6 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row1");
             		rows.forEach(function (currentRow) {
-					
-
-
 
 						var Tank1EngLtrHr1 = Number(currentRow.querySelector('#Tank1EngLtrHr1').value);
 						var Tank1RangeHr1 = Number(currentRow.querySelector('#Tank1RangeHr1').value);
@@ -1581,6 +1579,52 @@ function getValues() {
 
 	
 					});
+
+					var rows = document.querySelectorAll("tr.Tank1-row2");
+            		rows.forEach(function (currentRow) {
+
+						var Tank1EngLtrHr2 = Number(currentRow.querySelector('#Tank1EngLtrHr2').value);
+						var Tank1RangeHr2 = Number(currentRow.querySelector('#Tank1RangeHr2').value);
+						var Tank1RangeMile2 = Number(currentRow.querySelector('#Tank1RangeMile2').value);
+						var Tank1TripVol2 = Number(currentRow.querySelector('#Tank1TripVol2').value);
+						var Tank1FuelCost2 = Number(currentRow.querySelector('#Tank1FuelCost2').value);
+						var Tank1TripTime2 = Number(currentRow.querySelector('#Tank1TripTime2').value);
+						var Tank1LtrKn2 = Number(currentRow.querySelector('#Tank1LtrKn2').value);
+						var Tank1PoundLtr2 = Number(currentRow.querySelector('#Tank1PoundLtr2').value);
+						var Tank1KnGall2 = Number(currentRow.querySelector('#Tank1KnGall2').value);
+						var Tank1FuelMile2 = Number(currentRow.querySelector('#Tank1FuelMile2').value);
+						var Tank1PoundMile2 = Number(currentRow.querySelector('#Tank1PoundMile2').value);
+						var Tank1ServiceHr2 = Number(currentRow.querySelector('#Tank1ServiceHr2').value);
+						var Tank1SternHr2 = Number(currentRow.querySelector('#Tank1SternHr2').value);
+						var Tank1EngHr2 = Number(currentRow.querySelector('#Tank1EngHr2').value);
+						var Tank1MecTotMile2 = Number(currentRow.querySelector('#Tank1MecTotMile2').value);
+						var Tank1TotCost2 = Number(currentRow.querySelector('#Tank1TotCost2').value);
+						var Tank1TotCost22 = Number(currentRow.querySelector('#Tank1TotCost22').value);
+						var Tank1Time2 = Number(currentRow.querySelector('#Tank1Time2').value);
+
+						currentRow.querySelector("#Tank1EngLtrHr2").innerHTML = Tank1EngLtrHr2;
+						currentRow.querySelector("#Tank1RangeHr2").innerHTML = Tank1RangeHr2;
+						currentRow.querySelector("#Tank1RangeMile2").innerHTML = Tank1RangeMile2;
+						currentRow.querySelector("#Tank1TripVol2").innerHTML = Tank1TripVol2;
+						currentRow.querySelector("#Tank1FuelCost2").innerHTML = Tank1FuelCost2;
+						currentRow.querySelector("#Tank1TripTime2").innerHTML = Tank1TripTime2;
+						currentRow.querySelector("#Tank1LtrKn2").innerHTML = Tank1LtrKn2;
+						currentRow.querySelector("#Tank1PoundLtr2").innerHTML = Tank1PoundLtr2;
+						currentRow.querySelector("#Tank1KnGall2").innerHTML = Tank1KnGall2;
+						currentRow.querySelector("#Tank1FuelMile2").innerHTML = Tank1FuelMile2;
+						currentRow.querySelector("#Tank1PoundMile2").innerHTML = Tank1PoundMile2;
+						currentRow.querySelector("#Tank1ServiceHr2").innerHTML = Tank1ServiceHr2;
+						currentRow.querySelector("#Tank1SternHr2").innerHTML = Tank1SternHr2;
+						currentRow.querySelector("#Tank1EngHr2").innerHTML = Tank1EngHr2;
+						currentRow.querySelector("#Tank1MecTotMile2").innerHTML = Tank1MecTotMile2;
+						currentRow.querySelector("#Tank1TotCost2").innerHTML = Tank1TotCost2;
+						currentRow.querySelector("#Tank1TotCost22").innerHTML = Tank1TotCost22;
+						currentRow.querySelector("#Tank1Time2").innerHTML = Tank1Time2;
+						
+					});
+
+
+					
 					var rows = document.querySelectorAll("tr.Tank2-row1");
             			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
