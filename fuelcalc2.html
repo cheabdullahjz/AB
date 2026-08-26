@@ -1523,29 +1523,20 @@ function getValues() {
 					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
 					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
 
+					
+
 					var rows = document.querySelectorAll("tr.Tank1-row1");
             		rows.forEach(function (currentRow) {
 					
+						var x = document.getElementById("myDIV");
+						x.querySelector(".example").innerHTML = "Hello World!";
 
+
+						var Tank1EngLtrHr1 = Number(currentRow.querySelector('#Tank1EngLtrHr1').value);
 
 						currentRow.querySelector("#Tank1EngLtrHr1").innerHTML = Tank1EngLtrHr1;
-						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
-						currentRow.querySelector("#Tank1RangeMile1").innerHTML = Tank1RangeMile1;
-						currentRow.querySelector("#Tank1TripVol1").innerHTML = Tank1TripVol1;
-						currentRow.querySelector("#Tank1FuelCost1").innerHTML = Tank1FuelCost1;
-						currentRow.querySelector("#Tank1TripTime1").innerHTML = Tank1TripTime1;
-						currentRow.querySelector("#Tank1LtrKn1").innerHTML = Tank1LtrKn1;
-						currentRow.querySelector("#Tank1PoundLtr1").innerHTML = Tank1PoundLtr1;
-						currentRow.querySelector("#Tank1KnGall1").innerHTML = Tank1KnGall1;
-						currentRow.querySelector("#Tank1FuelMile1").innerHTML = Tank1FuelMile1;
-						currentRow.querySelector("#Tank1PoundMile1").innerHTML = Tank1PoundMile1;
-						currentRow.querySelector("#Tank1ServiceHr1").innerHTML = Tank1ServiceHr1;
-						currentRow.querySelector("#Tank1SternHr1").innerHTML = Tank1SternHr1;
-						currentRow.querySelector("#Tank1EngHr1").innerHTML = Tank1EngHr1;
-						currentRow.querySelector("#Tank1MecTotMile1").innerHTML = Tank1MecTotMile1;
-						currentRow.querySelector("#Tank1TotCost1").innerHTML = Tank1TotCost1;
-						currentRow.querySelector("#Tank1TotCost21").innerHTML = Tank1TotCost21;
-						currentRow.querySelector("#Tank1Time1").innerHTML = Tank1Time1;
+						
+						
 						
 						
 					});
