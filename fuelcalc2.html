@@ -1432,8 +1432,8 @@
 	</table>
 <script>
 function getValues() {
-            var rows1 = document.querySelectorAll("tr.package-row");
-            rows1.forEach(function (currentRow) {
+            var rows = document.querySelectorAll("tr.package-row");
+            rows.forEach(function (currentRow) {
 
                 var Journey = Number(currentRow.querySelector('#Journey').value);
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
@@ -1513,16 +1513,16 @@ function getValues() {
 
 
 
-				var rows2 = document.querySelectorAll("tr.package-result1");
-            	rows2.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result1");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
 
 					
 					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
 					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
 
-					var rows3 = document.querySelectorAll("tr.Tank1-row1");
-            		rows3.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row1");
+            		rows.forEach(function (currentRow) {
 					
 
 
@@ -1550,131 +1550,131 @@ function getValues() {
 
 
 
-					var rows4 = document.querySelectorAll("tr.Tank1-row1");
-            			rows4.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row1");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
 						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
 
 
 	
 					});
-					var rows5 = document.querySelectorAll("tr.Tank2-row1");
-            			rows5.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row1");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
 						currentRow.querySelector("#Tank2BurnLtrHr1").innerHTML = Burnltrhr1;
 					});
 				});
 
-				var rows6 = document.querySelectorAll("tr.package-result2");
-            	rows6.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result2");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange2").innerHTML = FuelRange2;
 
 					var Kn2 = Number(currentRow.querySelector('#Kn2').value);
 					var Burnltrhr2 = Number(currentRow.querySelector('#Burnltrhr2').value);
 
-					var rows7 = document.querySelectorAll("tr.Tank1-row2");
-            			rows7.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row2");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn2").innerHTML = Kn2;
 						currentRow.querySelector("#Tank1BurnLtrHr2").innerHTML = Burnltrhr2;
 					});
-					var rows8 = document.querySelectorAll("tr.Tank2-row2");
-            			rows8.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row2");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn2").innerHTML = Kn2;
 						currentRow.querySelector("#Tank2BurnLtrHr2").innerHTML = Burnltrhr2;
 					});
 				});
 
-				var rows9 = document.querySelectorAll("tr.package-result3");
-            	rows9.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result3");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange3").innerHTML = FuelRange3;
 
 					var Kn3 = Number(currentRow.querySelector('#Kn3').value);
 					var Burnltrhr3 = Number(currentRow.querySelector('#Burnltrhr3').value);
 
-					var rows10 = document.querySelectorAll("tr.Tank1-row3");
-            			rows10.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row3");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn3").innerHTML = Kn3;
 						currentRow.querySelector("#Tank1BurnLtrHr3").innerHTML = Burnltrhr3;
 					});
-					var rows11 = document.querySelectorAll("tr.Tank2-row3");
-            			rows11.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row3");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn3").innerHTML = Kn3;
 						currentRow.querySelector("#Tank2BurnLtrHr3").innerHTML = Burnltrhr3;
 					});
 				});
 
-				var rows12 = document.querySelectorAll("tr.package-result4");
-            	rows12.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result4");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange4").innerHTML = FuelRange4;
 
 					var Kn4 = Number(currentRow.querySelector('#Kn4').value);
 					var Burnltrhr4 = Number(currentRow.querySelector('#Burnltrhr4').value);
 
-					var rows13 = document.querySelectorAll("tr.Tank1-row4");
-            			rows13.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row4");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn4").innerHTML = Kn4;
 						currentRow.querySelector("#Tank1BurnLtrHr4").innerHTML = Burnltrhr4;
 					});
-					var rows14 = document.querySelectorAll("tr.Tank2-row4");
-            			rows14.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row4");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn4").innerHTML = Kn4;
 						currentRow.querySelector("#Tank2BurnLtrHr4").innerHTML = Burnltrhr4;
 					});
 				});
 
-				var rows15 = document.querySelectorAll("tr.package-result5");
-            	rows15.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result5");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange5").innerHTML = FuelRange5;
 
 					var Kn5 = Number(currentRow.querySelector('#Kn5').value);
 					var Burnltrhr5 = Number(currentRow.querySelector('#Burnltrhr5').value);
 
-					var rows16 = document.querySelectorAll("tr.Tank1-row5");
-            			rows16.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row5");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn5").innerHTML = Kn5;
 						currentRow.querySelector("#Tank1BurnLtrHr5").innerHTML = Burnltrhr5;
 					});
-					var rows17 = document.querySelectorAll("tr.Tank2-row5");
-            			rows17.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row5");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn5").innerHTML = Kn5;
 						currentRow.querySelector("#Tank2BurnLtrHr5").innerHTML = Burnltrhr5;
 					});
 				});
 
-				var rows18 = document.querySelectorAll("tr.package-result6");
-            	rows18.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result6");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange6").innerHTML = FuelRange6;
 
 					var Kn6 = Number(currentRow.querySelector('#Kn6').value);
 					var Burnltrhr6 = Number(currentRow.querySelector('#Burnltrhr6').value);
 
-					var rows19 = document.querySelectorAll("tr.Tank1-row6");
-            			rows19.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row6");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn6").innerHTML = Kn6;
 						currentRow.querySelector("#Tank1BurnLtrHr6").innerHTML = Burnltrhr6;
 					});
-					var rows20 = document.querySelectorAll("tr.Tank2-row6");
-            			rows20.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row6");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn6").innerHTML = Kn6;
 						currentRow.querySelector("#Tank2BurnLtrHr6").innerHTML = Burnltrhr6;
 					});
 				});
 
-				var rows21 = document.querySelectorAll("tr.package-result7");
-            	rows21.forEach(function (currentRow) {
+				var rows = document.querySelectorAll("tr.package-result7");
+            	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange7").innerHTML = FuelRange7;
 
 					var Kn7 = Number(currentRow.querySelector('#Kn7').value);
 					var Burnltrhr7 = Number(currentRow.querySelector('#Burnltrhr7').value);
 
-					var rows22 = document.querySelectorAll("tr.Tank1-row7");
-            			rows22.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank1-row7");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank1Kn7").innerHTML = Kn7;
 						currentRow.querySelector("#Tank1BurnLtrHr7").innerHTML = Burnltrhr7;
 					});
 
-					var rows23 = document.querySelectorAll("tr.Tank2-row7");
-            			rows23.forEach(function (currentRow) {
+					var rows = document.querySelectorAll("tr.Tank2-row7");
+            			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn7").innerHTML = Kn7;
 						currentRow.querySelector("#Tank2BurnLtrHr7").innerHTML = Burnltrhr7;
 					});
