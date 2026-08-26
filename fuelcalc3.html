@@ -1515,14 +1515,6 @@ function getValues() {
 					});
 
 
-
-					var rows = document.querySelectorAll("tr.Tank1-row1");
-            			rows.forEach(function (currentRow) {
-                		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
-						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
-
-					});
-
 					var rows = document.querySelectorAll("tr.Tank1-row2");
             		rows.forEach(function (currentRow) {
 
@@ -1789,16 +1781,22 @@ function getValues() {
 				FuelRange6=Journey*TotalFuel*CostLtr;
 				FuelRange7=Journey*TotalFuel*CostLtr;
 
-
-
+				
 
 				var rows = document.querySelectorAll("tr.package-result1");
             	rows.forEach(function (currentRow) {
                 	currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
 
-					
 					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
 					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
+
+					var rows = document.querySelectorAll("tr.Tank1-row1");
+            			rows.forEach(function (currentRow) {
+                		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
+						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
+
+					});
+
 
 					var rows = document.querySelectorAll("tr.Tank2-row1");
             			rows.forEach(function (currentRow) {
