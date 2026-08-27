@@ -1438,6 +1438,14 @@ function getValues() {
 						var Tank1TotCost21 = Number(currentRow.querySelector('#Tank1TotCost21').value);
 						var Tank1Time1 = Number(currentRow.querySelector('#Tank1Time1').value);
 
+					
+						var FuelLtr=375;
+						if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
+                        return;
+                    	}
+                
+						Tank1RangeHr1=FuelLtr/Burnltrhr1 ;
+
 						currentRow.querySelector("#Tank1EngLtrHr1").innerHTML = Tank1EngLtrHr1;
 						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
 						currentRow.querySelector("#Tank1RangeMile1").innerHTML = Tank1RangeMile1;
@@ -1715,7 +1723,7 @@ function getValues() {
                 var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
 				
 				
-
+				var plus30percent1=0;
 				var FuelRange1 = 0;
                 var PercentUsed1 = 0;
                 var Burned1 = 0;
@@ -1723,6 +1731,7 @@ function getValues() {
                 var Time1= 0;
                 var Cost1 = 0;
 
+				var plus30percent2=0;
 				var FuelRange2 = 0;
                 var PercentUsed2 = 0;
                 var Burned2 = 0;
@@ -1730,6 +1739,7 @@ function getValues() {
                 var Time2 = 0;
                 var Cost2 = 0;
 
+				var plus30percent3=0;
 				var FuelRange3 = 0;
                 var PercentUsed3 = 0;
                 var Burned3 = 0;
@@ -1737,6 +1747,7 @@ function getValues() {
                 var Time3 = 0;
                 var Cost3 = 0;
 
+				var plus30percent4=0;
 				var FuelRange4 = 0;
                 var PercentUsed4 = 0;
                 var Burned4 = 0;
@@ -1744,6 +1755,7 @@ function getValues() {
                 var Time4 = 0;
                 var Cost4 = 0;
 
+				var plus30percent5=0;
 				var FuelRange5 = 0;
                 var PercentUsed5 = 0;
                 var Burned5 = 0;
@@ -1751,6 +1763,7 @@ function getValues() {
                 var Time5 = 0;
                 var Cost5 = 0;
 
+				var plus30percent6=0;
 				var FuelRange6 = 0;
                 var PercentUsed6 = 0;
                 var Burned6 = 0;
@@ -1758,6 +1771,7 @@ function getValues() {
                 var Time6 = 0;
                 var Cost6 = 0;
 
+				var plus30percent7=0;
 				var FuelRange7 = 0;
                 var PercentUsed7 = 0;
                 var Burned7 = 0;
