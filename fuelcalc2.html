@@ -1439,10 +1439,7 @@ function getValues() {
 						var Tank1TotCost1 = Number(currentRow.querySelector('#Tank1TotCost1').value);
 						var Tank1TotCost21 = Number(currentRow.querySelector('#Tank1TotCost21').value);
 						var Tank1Time1 = Number(currentRow.querySelector('#Tank1Time1').value);
-					});
 
-				var rows = document.querySelectorAll("tr.Tank1-row1");
-            		rows.forEach(function (currentRow) {
 						var FuelLtr=375;
 						if (isNaN(FuelLtr) || isNaN(Tank1Burnltrhr1)) {
                         return;
