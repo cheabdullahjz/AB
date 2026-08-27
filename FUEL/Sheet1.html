@@ -681,8 +681,14 @@
 
                         var Tank1TotalRange1_val=(FuelLtr/Tank1EngLtrHr1)*Kn1;
 
-                        document.getElementById("Tank1TotalRange1").style.color = "red";
+                        document.getElementById("Tank1TotalRange1").style.color = "green";
                         document.getElementById("Tank1TotalRange1").innerHTML= Tank1TotalRange1_val;
+
+
+                        Tank1RangeMile1_val= Tank1RangeHr1_val*Kn1;
+
+                        document.getElementById("Tank1RangeMile1").style.color = "blue";
+                        document.getElementById("Tank1RangeMile1").innerHTML= Tank1RangeMile1_val;
 
 
 
