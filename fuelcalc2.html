@@ -1419,6 +1419,8 @@ function getValues() {
 				var rows = document.querySelectorAll("tr.Tank1-row1");
             		rows.forEach(function (currentRow) {
 
+						var Tank1Kn1 = Number(currentRow.querySelector('#Tank1Kn1').value);
+						var Tank1Burnltrhr1 = Number(currentRow.querySelector('#Tank1Burnltrhr1').value);
 						var Tank1EngLtrHr1 = Number(currentRow.querySelector('#Tank1EngLtrHr1').value);
 						var Tank1RangeHr1 = Number(currentRow.querySelector('#Tank1RangeHr1').value);
 						var Tank1RangeMile1 = Number(currentRow.querySelector('#Tank1RangeMile1').value);
@@ -1440,10 +1442,10 @@ function getValues() {
 
 					
 						var FuelLtr=375;
-						if (isNaN(FuelLtr) || isNaN(Burnltrhr1)) {
+						if (isNaN(FuelLtr) || isNaN(Tank1Burnltrhr1)) {
                         return;
                     	}
-						Tank1RangeHr1=FuelLtr/Burnltrhr1 ;
+						Tank1RangeHr1=FuelLtr/Tank1Burnltrhr1 ;
 
 						
 
@@ -1472,6 +1474,8 @@ function getValues() {
 					var rows = document.querySelectorAll("tr.Tank1-row2");
             		rows.forEach(function (currentRow) {
 
+						var Tank1Kn2 = Number(currentRow.querySelector('#Tank1Kn2').value);
+						var Tank1Burnltrhr2 = Number(currentRow.querySelector('#Tank1Burnltrhr2').value);
 						var Tank1EngLtrHr2 = Number(currentRow.querySelector('#Tank1EngLtrHr2').value);
 						var Tank1RangeHr2 = Number(currentRow.querySelector('#Tank1RangeHr2').value);
 						var Tank1RangeMile2 = Number(currentRow.querySelector('#Tank1RangeMile2').value);
@@ -1514,6 +1518,10 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row3");
             		rows.forEach(function (currentRow) {
+
+
+						var Tank1Kn3 = Number(currentRow.querySelector('#Tank1Kn3').value);
+						var Tank1Burnltrhr3 = Number(currentRow.querySelector('#Tank1Burnltrhr3').value);
 						var Tank1EngLtrHr3 = Number(currentRow.querySelector('#Tank1EngLtrHr3').value);
 						var Tank1RangeHr3 = Number(currentRow.querySelector('#Tank1RangeHr3').value);
 						var Tank1RangeMile3 = Number(currentRow.querySelector('#Tank1RangeMile3').value);
@@ -1555,6 +1563,9 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row4");
             		rows.forEach(function (currentRow) {
+
+						var Tank1Kn4 = Number(currentRow.querySelector('#Tank1Kn4').value);
+						var Tank1Burnltrhr4 = Number(currentRow.querySelector('#Tank1Burnltrhr4').value);
 						var Tank1EngLtrHr4 = Number(currentRow.querySelector('#Tank1EngLtrHr4').value);
 						var Tank1RangeHr4 = Number(currentRow.querySelector('#Tank1RangeHr4').value);
 						var Tank1RangeMile4 = Number(currentRow.querySelector('#Tank1RangeMile4').value);
@@ -1596,6 +1607,9 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row5");
             		rows.forEach(function (currentRow) {
+
+						var Tank1Kn5 = Number(currentRow.querySelector('#Tank1Kn5').value);
+						var Tank1Burnltrhr5 = Number(currentRow.querySelector('#Tank1Burnltrhr5').value);
 						var Tank1EngLtrHr5 = Number(currentRow.querySelector('#Tank1EngLtrHr5').value);
 						var Tank1RangeHr5 = Number(currentRow.querySelector('#Tank1RangeHr5').value);
 						var Tank1RangeMile5 = Number(currentRow.querySelector('#Tank1RangeMile5').value);
@@ -1637,6 +1651,9 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row6");
             		rows.forEach(function (currentRow) {
+
+						var Tank1Kn6 = Number(currentRow.querySelector('#Tank1Kn6').value);
+						var Tank1Burnltrhr6 = Number(currentRow.querySelector('#Tank1Burnltrhr6').value);
 						var Tank1EngLtrHr6 = Number(currentRow.querySelector('#Tank1EngLtrHr6').value);
 						var Tank1RangeHr6 = Number(currentRow.querySelector('#Tank1RangeHr6').value);
 						var Tank1RangeMile6 = Number(currentRow.querySelector('#Tank1RangeMile6').value);
@@ -1678,6 +1695,9 @@ function getValues() {
 
 					var rows = document.querySelectorAll("tr.Tank1-row7");
             		rows.forEach(function (currentRow) {
+
+						var Tank1Kn7 = Number(currentRow.querySelector('#Tank1Kn7').value);
+						var Tank1Burnltrhr7 = Number(currentRow.querySelector('#Tank1Burnltrhr7').value);
 						var Tank1EngLtrHr7 = Number(currentRow.querySelector('#Tank1EngLtrHr7').value);
 						var Tank1RangeHr7 = Number(currentRow.querySelector('#Tank1RangeHr7').value);
 						var Tank1RangeMile7 = Number(currentRow.querySelector('#Tank1RangeMile7').value);
