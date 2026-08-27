@@ -453,7 +453,7 @@
                 </td>
                 <td><input type="text" name="Tank1RangeMile1" id="Tank1RangeMile1" class="form-control" value="367" />
                 </td>
-                <td><input type="text" name="Tank1TripVol1" id="Tank1TripVol1" class="form-control" value="307" /></td>
+                <td><input  id="Tank1TripVol1" class="form-control" value="307" /></td>
                 <td><input type="text" name="Tank1FuelCost1" id="Tank1FuelCost1" class="form-control" value="288.1" />
                 </td>
                 <td><input type="text" name="Tank1TripTime1" id="Tank1TripTime1" class="form-control" value="32.6" />
@@ -691,6 +691,12 @@
                         document.getElementById("Tank1RangeMile1").innerHTML= Tank1RangeMile1_val;
 
 
+                        Tank1TripVol1_val=(Journey/Kn1)*Tank1TripVol1;
+
+                        document.getElementById("Tank1TripVol1").style.color = "red";
+                        document.getElementById("Tank1TripVol1").innerHTML= Tank1TripVol1_val;
+
+                    )*
 
 
                     });
