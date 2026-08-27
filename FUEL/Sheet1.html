@@ -453,7 +453,7 @@
                 <td name="Tank1RangeMile1" id="Tank1RangeMile1"  value="367" ></td>
                 <td name="Tank1TripVol1" id="Tank1TripVol1" class="form-control" value="307"></td>
                 <td name="Tank1FuelCost1" id="Tank1FuelCost1" class="form-control" value="288.1"></td>
-                <td><input type="text" name="Tank1TripTime1" id="Tank1TripTime1" class="form-control" value="32.6" />
+                <td  name="Tank1TripTime1" id="Tank1TripTime1"  value="32.6" >
                 </td>
                 <td><input type="text" name="Tank1LtrKn1" id="Tank1LtrKn1" class="form-control" value="1.0" /></td>
                 <td><input type="text" name="Tank1PoundLtr1" id="Tank1PoundLtr1" class="form-control" value="0.94" />
@@ -672,36 +672,34 @@
                         document.getElementById("Tank1RangeHr1").style.color = "red";
                         document.getElementById("Tank1RangeHr1").innerHTML= Tank1RangeHr1_val;
 
-
-
                         var Tank1TotalRange1_val=(FuelLtr/Tank1EngLtrHr1)*Kn1;
 
                         document.getElementById("Tank1TotalRange1").style.color = "green";
                         document.getElementById("Tank1TotalRange1").innerHTML= Tank1TotalRange1_val;
 
-
-                        Tank1RangeMile1_val= Tank1RangeHr1_val*Kn1;
+                        var Tank1RangeMile1_val= Tank1RangeHr1_val*Kn1;
 
                         document.getElementById("Tank1RangeMile1").style.color = "blue";
                         document.getElementById("Tank1RangeMile1").innerHTML= Tank1RangeMile1_val;
 
-
-                        Tank1TripVol1_val=(Journey/Kn1)*Tank1EngLtrHr1;
+                        var Tank1TripVol1_val=(Journey/Kn1)*Tank1EngLtrHr1;
 
                         document.getElementById("Tank1TripVol1").style.color = "red";
                         document.getElementById("Tank1TripVol1").innerHTML= Tank1TripVol1_val;
 
-                        
-
-                        Tank1FuelCost1_val=Tank1TripVol1_val*Tank1PoundLtr1;
+                        var Tank1FuelCost1_val=Tank1TripVol1_val*Tank1PoundLtr1;
 
                         document.getElementById("Tank1FuelCost1").style.color = "green";
                         document.getElementById("Tank1FuelCost1").innerHTML= Tank1FuelCost1_val;
 
-                        console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);
+                        
+
+                        var Tank1TripTime1_val =Journey*Kn1;
+                        document.getElementById("Tank1TripTime1").style.color = "blue";
+                        document.getElementById("Tank1TripTime1").innerHTML= Tank1TripTime1_val;   
 
 
-                        <!--       -->
+                        <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
                         <!--       -->
 
                     
