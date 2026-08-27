@@ -670,8 +670,6 @@
                         var FuelLtr = 375.00;
                         var Tank1RangeHr1_val = FuelLtr / Burnltrhr1;
 
-                        console.log(Tank1RangeHr1, Tank1RangeHr1_val);
-
 
                         document.getElementById("Tank1RangeHr1").style.color = "red";
                         document.getElementById("Tank1RangeHr1").innerHTML= Tank1RangeHr1_val;
@@ -695,10 +693,14 @@
                         document.getElementById("Tank1TripVol1").style.color = "red";
                         document.getElementById("Tank1TripVol1").innerHTML= Tank1TripVol1_val;
 
-                        Tank1FuelCost1=Tank1TripVol1_val*Tank1PoundLtr1;
+                        console.log(Tank1TripVol1, Tank1TripVol1_val);
 
-                        document.getElementById("Tank1TripVol1").style.color = "green";
-                        document.getElementById("Tank1TripVol1").innerHTML= Tank1TripVol1_val;
+                        Tank1FuelCost1_val=Tank1TripVol1_val*Tank1PoundLtr1;
+
+                        document.getElementById("Tank1FuelCost1").style.color = "green";
+                        document.getElementById("Tank1FuelCost1").innerHTML= Tank1FuelCost1_val;
+
+                        console.log(Tank1PoundLtr1,Tank1FuelCost1, Tank1FuelCost1_val);
                     
 
 
