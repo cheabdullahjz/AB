@@ -453,28 +453,24 @@
                 <td name="Tank1RangeMile1" id="Tank1RangeMile1"  value="367" ></td>
                 <td name="Tank1TripVol1" id="Tank1TripVol1" class="form-control" value="307"></td>
                 <td name="Tank1FuelCost1" id="Tank1FuelCost1" class="form-control" value="288.1"></td>
-                <td  name="Tank1TripTime1" id="Tank1TripTime1"  value="32.6" >
-                </td>
-                <td><input type="text" name="Tank1LtrKn1" id="Tank1LtrKn1" class="form-control" value="1.0" /></td>
+                <td  name="Tank1TripTime1" id="Tank1TripTime1"  value="32.6" ></td>
+                <td  name="Tank1LtrKn1" id="Tank1LtrKn1"  value="1.0" ></td>
                 <td><input type="text" name="Tank1PoundLtr1" id="Tank1PoundLtr1" class="form-control" value="0.94" />
                 </td>
-                <td><input type="text" name="Tank1KnGall1" id="Tank1KnGall1" class="form-control" value="5.11" /></td>
-                <td><input type="text" name="Tank1FuelMile1" id="Tank1FuelMile1" class="form-control" value="0.18" />
-                </td>
-                <td><input type="text" name="Tank1PoundMile1" id="Tank1PoundMile1" class="form-control" value="0.96" />
-                </td>
+                <td  name="Tank1KnGall1" id="Tank1KnGall1"  value="5.11" ></td>
+                <td  name="Tank1FuelMile1" id="Tank1FuelMile1"  value="0.18" ></td>
+                <td  name="Tank1PoundMile1" id="Tank1PoundMile1" value="0.96" ></td>
                 <td class="s15"></td>
                 <td class="s15">1,500.00</td>
                 <td><input type="text" name="Tank1ServiceHr1" id="Tank1ServiceHr1" class="form-control" value="0.40" />
                 </td>
-                <td><input type="text" name="Tank1SternHr1" id="Tank1SternHr1" class="form-control" value="0.43" /></td>
+                <td  name="Tank1SternHr1" id="Tank1SternHr1"  value="0.43" ></td>
                 <td><input type="text" name="Tank1EngHr1" id="Tank1EngHr1" class="form-control" value="4.87" /></td>
-                <td><input type="text" name="Tank1MecTotMile1" id="Tank1MecTotMile1" class="form-control"
-                        value="0.62" /></td>
-                <td><input type="text" name="Tank1TotCost1" id="Tank1TotCost1" class="form-control" value="1.58" /></td>
-                <td><input type="text" name="Tank1TotCost21" id="Tank1TotCost21" class="form-control" value="474.05" />
+                <td name="Tank1MecTotMile1" id="Tank1MecTotMile1" value="0.62" ></td>
+                <td  name="Tank1TotCost1" id="Tank1TotCost1"  value="1.58" ></td>
+                <td name="Tank1TotCost21" id="Tank1TotCost21"  value="474.05" >
                 </td>
-                <td><input type="text" name="Tank1Time1" id="Tank1Time1" class="form-control" value="32.6" /></td>
+                <td  name="Tank1Time1" id="Tank1Time1"  value="32.6" ></td>
             </tr>
 
             <tr class="Tank2-row1" style="height: 19px">
@@ -668,35 +664,67 @@
                         var FuelLtr = 375.00;
                         var Tank1RangeHr1_val = FuelLtr / Burnltrhr1;
 
-
                         document.getElementById("Tank1RangeHr1").style.color = "red";
                         document.getElementById("Tank1RangeHr1").innerHTML= Tank1RangeHr1_val;
 
                         var Tank1TotalRange1_val=(FuelLtr/Tank1EngLtrHr1)*Kn1;
-
                         document.getElementById("Tank1TotalRange1").style.color = "green";
                         document.getElementById("Tank1TotalRange1").innerHTML= Tank1TotalRange1_val;
 
                         var Tank1RangeMile1_val= Tank1RangeHr1_val*Kn1;
-
                         document.getElementById("Tank1RangeMile1").style.color = "blue";
                         document.getElementById("Tank1RangeMile1").innerHTML= Tank1RangeMile1_val;
 
                         var Tank1TripVol1_val=(Journey/Kn1)*Tank1EngLtrHr1;
-
                         document.getElementById("Tank1TripVol1").style.color = "red";
                         document.getElementById("Tank1TripVol1").innerHTML= Tank1TripVol1_val;
 
                         var Tank1FuelCost1_val=Tank1TripVol1_val*Tank1PoundLtr1;
-
                         document.getElementById("Tank1FuelCost1").style.color = "green";
                         document.getElementById("Tank1FuelCost1").innerHTML= Tank1FuelCost1_val;
-
-                        
 
                         var Tank1TripTime1_val =Journey*Kn1;
                         document.getElementById("Tank1TripTime1").style.color = "blue";
                         document.getElementById("Tank1TripTime1").innerHTML= Tank1TripTime1_val;   
+
+                        var Tank1LtrKn1_val=Tank1EngLtrHr1/Kn1;
+                        document.getElementById("Tank1LtrKn1").style.color = "red";
+                        document.getElementById("Tank1LtrKn1").innerHTML= Tank1LtrKn1_val;
+
+                        var Tank1KnGall1_val = (Kn1*1.15078)/(Tank1EngLtrHr1/4.54);
+                        document.getElementById("Tank1KnGall1").style.color = "green";
+                        document.getElementById("Tank1KnGall1").innerHTML= Tank1KnGall1_val;
+
+                        var Tank1FuelMile1_val =Tank1LtrKn1_val/ Tank1PoundLtr1;
+                        document.getElementById("Tank1FuelMile1").style.color = "blue";
+                        document.getElementById("Tank1FuelMile1").innerHTML= Tank1FuelMile1_val;
+
+
+                        var Tank1PoundMile1_val=Tank1LtrKn1_val*Tank1PoundLtr1;
+                        document.getElementById("Tank1PoundMile1").style.color = "red";
+                        document.getElementById("Tank1PoundMile1").innerHTML= Tank1PoundMile1_val;
+
+                        var Tank1SternHr1_val =(16000/4000)/Kn1;
+                        document.getElementById("Tank1SternHr1").style.color = "green";
+                        document.getElementById("Tank1SternHr1").innerHTML= Tank1SternHr1_val;
+
+                        var Tank1MecTotMile1_val =(Tank1ServiceHr1+ Tank1SternHr1_val+ Tank1EngHr1)/Kn1;
+                        document.getElementById("Tank1MecTotMile1").style.color = "blue";
+                        document.getElementById("Tank1MecTotMile1").innerHTML= Tank1MecTotMile1_val;
+
+                        var Tank1TotCost1_val =Tank1MecTotMile1_val+Tank1PoundMile1_val;
+                        document.getElementById("Tank1TotCost1").style.color = "red";
+                        document.getElementById("Tank1TotCost1").innerHTML= Tank1TotCost1_val;
+
+                        var Tank1TotCost1_val =Tank1MecTotMile1_val*Tank1PoundMile1_val;
+                        document.getElementById("Tank1TotCost1").style.color = "green";
+                        document.getElementById("Tank1TotCost1").innerHTML= Tank1TotCost1_val;
+
+                        var Tank1Time1_val =Journey+Journey*Kn1;
+                        document.getElementById("Tank1Time1").style.color = "blue";
+                        document.getElementById("Tank1Time1").innerHTML= Tank1Time1_val;
+
+                     
 
 
                         <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
