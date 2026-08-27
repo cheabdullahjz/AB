@@ -1416,95 +1416,7 @@ function getValues() {
             var rows = document.querySelectorAll("tr.package-row");
             rows.forEach(function (currentRow) {
 
-                var Journey = Number(currentRow.querySelector('#Journey').value);
-                var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
-                var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
-				
-				
-
-				var FuelRange1 = 0;
-                var PercentUsed1 = 0;
-                var Burned1 = 0;
-				var Remaining1 =0;
-                var Time1= 0;
-                var Cost1 = 0;
-
-				var FuelRange2 = 0;
-                var PercentUsed2 = 0;
-                var Burned2 = 0;
-				var Remaining2 =0;
-                var Time2 = 0;
-                var Cost2 = 0;
-
-				var FuelRange3 = 0;
-                var PercentUsed3 = 0;
-                var Burned3 = 0;
-				var Remaining3 =0;
-                var Time3 = 0;
-                var Cost3 = 0;
-
-				var FuelRange4 = 0;
-                var PercentUsed4 = 0;
-                var Burned4 = 0;
-				var Remaining4 =0;
-                var Time4 = 0;
-                var Cost4 = 0;
-
-				var FuelRange5 = 0;
-                var PercentUsed5 = 0;
-                var Burned5 = 0;
-				var Remaining5 =0;
-                var Time5 = 0;
-                var Cost5 = 0;
-
-				var FuelRange6 = 0;
-                var PercentUsed6 = 0;
-                var Burned6 = 0;
-				var Remaining6 =0;
-                var Time6 = 0;
-                var Cost6 = 0;
-
-				var FuelRange7 = 0;
-                var PercentUsed7 = 0;
-                var Burned7 = 0;
-				var Remaining7 =0;
-                var Time7 = 0;
-                var Cost7 = 0;
-
-				
-
-				
-
-
-				
-				
-
-                if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
-                        return;
-                    }
-                
-				FuelRange1=Journey*TotalFuel*CostLtr;
-				FuelRange2=Journey*TotalFuel*CostLtr;
-				FuelRange3=Journey*TotalFuel*CostLtr;
-				FuelRange4=Journey*TotalFuel*CostLtr;
-				FuelRange5=Journey*TotalFuel*CostLtr;
-				FuelRange6=Journey*TotalFuel*CostLtr;
-				FuelRange7=Journey*TotalFuel*CostLtr;
-
-
-
-
-				var rows = document.querySelectorAll("tr.package-result1");
-            	rows.forEach(function (currentRow) {
-                	currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
-
-					
-					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
-					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
-
-					
-
-					var rows = document.querySelectorAll("tr.Tank1-row1");
+				var rows = document.querySelectorAll("tr.Tank1-row1");
             		rows.forEach(function (currentRow) {
 
 						var Tank1EngLtrHr1 = Number(currentRow.querySelector('#Tank1EngLtrHr1').value);
@@ -1547,14 +1459,6 @@ function getValues() {
 						
 					});
 
-
-
-					var rows = document.querySelectorAll("tr.Tank1-row1");
-            			rows.forEach(function (currentRow) {
-                		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
-						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
-
-					});
 
 					var rows = document.querySelectorAll("tr.Tank1-row2");
             		rows.forEach(function (currentRow) {
@@ -1804,8 +1708,105 @@ function getValues() {
 						currentRow.querySelector("#Tank1Time7").innerHTML = Tank1Time7;
 					});
 
+				
+
+                var Journey = Number(currentRow.querySelector('#Journey').value);
+                var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
+                var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
+				
+				
+
+				var FuelRange1 = 0;
+                var PercentUsed1 = 0;
+                var Burned1 = 0;
+				var Remaining1 =0;
+                var Time1= 0;
+                var Cost1 = 0;
+
+				var FuelRange2 = 0;
+                var PercentUsed2 = 0;
+                var Burned2 = 0;
+				var Remaining2 =0;
+                var Time2 = 0;
+                var Cost2 = 0;
+
+				var FuelRange3 = 0;
+                var PercentUsed3 = 0;
+                var Burned3 = 0;
+				var Remaining3 =0;
+                var Time3 = 0;
+                var Cost3 = 0;
+
+				var FuelRange4 = 0;
+                var PercentUsed4 = 0;
+                var Burned4 = 0;
+				var Remaining4 =0;
+                var Time4 = 0;
+                var Cost4 = 0;
+
+				var FuelRange5 = 0;
+                var PercentUsed5 = 0;
+                var Burned5 = 0;
+				var Remaining5 =0;
+                var Time5 = 0;
+                var Cost5 = 0;
+
+				var FuelRange6 = 0;
+                var PercentUsed6 = 0;
+                var Burned6 = 0;
+				var Remaining6 =0;
+                var Time6 = 0;
+                var Cost6 = 0;
+
+				var FuelRange7 = 0;
+                var PercentUsed7 = 0;
+                var Burned7 = 0;
+				var Remaining7 =0;
+                var Time7 = 0;
+                var Cost7 = 0;
+
+				
+
+				
+
+				var rows = document.querySelectorAll("tr.Tank1-row1");
+            			rows.forEach(function (currentRow) {
+                		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
+						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
+
+					});
+				
+				
+
+                if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
+                        return;
+                    }
+                
+				FuelRange1=Journey*TotalFuel*CostLtr;
+				FuelRange2=Journey*TotalFuel*CostLtr;
+				FuelRange3=Journey*TotalFuel*CostLtr;
+				FuelRange4=Journey*TotalFuel*CostLtr;
+				FuelRange5=Journey*TotalFuel*CostLtr;
+				FuelRange6=Journey*TotalFuel*CostLtr;
+				FuelRange7=Journey*TotalFuel*CostLtr;
+
+
+
+
+				var rows = document.querySelectorAll("tr.package-result1");
+            	rows.forEach(function (currentRow) {
+                	currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
 
 					
+					var Kn1 = Number(currentRow.querySelector('#Kn1').value);
+					var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
+
+					var rows = document.querySelectorAll("tr.Tank1-row1");
+            			rows.forEach(function (currentRow) {
+                		currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
+						currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
+					});
+
 					var rows = document.querySelectorAll("tr.Tank2-row1");
             			rows.forEach(function (currentRow) {
                 		currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
