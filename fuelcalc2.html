@@ -1413,10 +1413,8 @@
 	</table>
 <script>
 function getValues() {
-            var rows = document.querySelectorAll("tr.package-row");
-            rows.forEach(function (currentRow) {
 
-				var rows = document.querySelectorAll("tr.Tank1-row1");
+			var rows = document.querySelectorAll("tr.Tank1-row1");
             		rows.forEach(function (currentRow) {
 
 						var Tank1Kn1 = Number(currentRow.querySelector('#Tank1Kn1').value);
@@ -1732,7 +1730,11 @@ function getValues() {
 						currentRow.querySelector("#Tank1Time7").innerHTML = Tank1Time7;
 					});
 
-				
+	
+            var rows = document.querySelectorAll("tr.package-row");
+            rows.forEach(function (currentRow) {
+
+
 
                 var Journey = Number(currentRow.querySelector('#Journey').value);
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
