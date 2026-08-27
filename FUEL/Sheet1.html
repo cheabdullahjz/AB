@@ -441,11 +441,14 @@
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
                 <td class="s11" dir="ltr">Engine1Tank1</td>
+
                 <td name="Tank1Kn1" id="Tank1Kn1" value="9"></td>
                 <td name="Tank1BurnLtrHr1" id="Tank1BurnLtrHr1" value="9"></td>
+
                 <td class="s13">375.00</td>
+
                 <td><input type="text" name="Tank1EngLtrHr1" id="Tank1EngLtrHr1" class="form-control" value="9" /></td>
-                <td><input type="text" name="Tank1RangeHr1" id="Tank1RangeHr1" class="form-control" value="40" /></td>
+                <td name="Tank1RangeHr1" id="Tank1RangeHr1"  value="40"></td>
                 <td><input type="text" name="Tank1TotalRange1" id="Tank1TotalRange1" class="form-control" value="367" />
                 </td>
                 <td><input type="text" name="Tank1RangeMile1" id="Tank1RangeMile1" class="form-control" value="367" />
@@ -654,11 +657,7 @@
 
                         document.getElementById("Tank1RangeHr1").innerHTML = Tank1RangeHr1_val;
 
-                        var rows = document.querySelectorAll("tr.Tank1-row1");
-                        rows.forEach(function (currentRow) {
 
-                            currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1_val;
-                        });
                     });
                 });
 
