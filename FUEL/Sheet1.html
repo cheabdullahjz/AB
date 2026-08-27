@@ -378,13 +378,16 @@
                 <td class="s0" dir="ltr"></td>
                 <td class="s1"></td>
                 <td class="s2">Journey</td>
-                <td><input type="text" name="Journey" id="Journey" class="form-control" onkeydown="this.style.backgroundColor = 'red';" onkeyup="getValues()"/></td>
+                <td><input type="text" name="Journey" id="Journey" class="form-control"
+                        onkeydown="this.style.backgroundColor = 'red';" onkeyup="getValues()" /></td>
                 <td class="s1"></td>
                 <td class="s2" dir="ltr">Totalfuel</td>
-                <td><input type="text" name="TotalFuel" id="TotalFuel" class="form-control" onkeydown="this.style.backgroundColor = 'green';" onkeyup="getValues()"/></td>
+                <td><input type="text" name="TotalFuel" id="TotalFuel" class="form-control"
+                        onkeydown="this.style.backgroundColor = 'green';" onkeyup="getValues()" /></td>
                 <td class="s1"></td>
                 <td class="s2" dir="ltr">Costltr</td>
-                <td><input type="text" name="CostLtr" id="CostLtr" class="form-control" onkeydown="this.style.backgroundColor = 'blue';" onkeyup="getValues()"/></td>
+                <td><input type="text" name="CostLtr" id="CostLtr" class="form-control"
+                        onkeydown="this.style.backgroundColor = 'blue';" onkeyup="getValues()" /></td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -553,4 +556,58 @@
             </tr>
         </tbody>
     </table>
+
+
+    <script>
+        function getValues() {
+
+            var rows = document.querySelectorAll("tr.userinput-row");
+            rows.forEach(function (currentRow) {
+
+
+
+                var Journey = Number(currentRow.querySelector('#Journey').value);
+                var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
+                var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
+
+
+                var plus30percent1 = 0;
+                var FuelRange1 = 0;
+                var PercentUsed1 = 0;
+                var Burned1 = 0;
+                var Remaining1 = 0;
+                var Time1 = 0;
+                var Cost1 = 0;
+
+                if (isNaN(Journey) || isNaN(TotalFuel) || isNaN(CostLtr)) {
+                    return;
+                }
+
+                FuelRange1 = Journey * TotalFuel * CostLtr;
+
+                var rows = document.querySelectorAll("tr.package-result1");
+                rows.forEach(function (currentRow) {
+                    currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
+
+
+                    var Kn1 = Number(currentRow.querySelector('#Kn1').value);
+                    var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
+
+                    var rows = document.querySelectorAll("tr.Tank1-row1");
+                    rows.forEach(function (currentRow) {
+                        currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
+                        currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
+                    });
+
+                    var rows = document.querySelectorAll("tr.Tank2-row1");
+                    rows.forEach(function (currentRow) {
+                        currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
+                        currentRow.querySelector("#Tank2BurnLtrHr1").innerHTML = Burnltrhr1;
+                    });
+                });
+            });
+            setInterval(getValues, 1000);
+        }
+    </script>
+
 </div>
