@@ -1440,11 +1440,12 @@ function getValues() {
 
 					
 						var FuelLtr=375;
-						if (isNaN(Journey) || isNaN(TotalFuel)|| isNaN(CostLtr)) {
+						if (isNaN(FuelLtr) || isNaN(Burnltrhr1)) {
                         return;
                     	}
-                
 						Tank1RangeHr1=FuelLtr/Burnltrhr1 ;
+
+						
 
 						currentRow.querySelector("#Tank1EngLtrHr1").innerHTML = Tank1EngLtrHr1;
 						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
