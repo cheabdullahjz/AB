@@ -1437,14 +1437,11 @@ function getValues() {
 						var Tank1TotCost21 = Number(currentRow.querySelector('#Tank1TotCost21').value);
 						var Tank1Time1 = Number(currentRow.querySelector('#Tank1Time1').value);
 				
-						var rows = document.querySelectorAll("tr.Tank1-row1");
-            			rows.forEach(function (currentRow) {
-						var FuelLtr=375;
-						var Tank1RangeHr1=FuelLtr/Tank1Burnltrhr1 ;
+						
 
 
 						currentRow.querySelector("#Tank1EngLtrHr1").innerHTML = Tank1EngLtrHr1;
-						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
+						
 						currentRow.querySelector("#Tank1RangeMile1").innerHTML = Tank1RangeMile1;
 						currentRow.querySelector("#Tank1TripVol1").innerHTML = Tank1TripVol1;
 						currentRow.querySelector("#Tank1FuelCost1").innerHTML = Tank1FuelCost1;
@@ -1833,6 +1830,21 @@ function getValues() {
                 		currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
 						currentRow.querySelector("#Tank2BurnLtrHr1").innerHTML = Burnltrhr1;
 					});
+
+
+
+
+					var rows = document.querySelectorAll("tr.Tank1-row1");
+            			rows.forEach(function (currentRow) {
+						var Tank1Burnltrhr1 = Number(currentRow.querySelector('#Tank1Burnltrhr1').value);
+						var FuelLtr=375;
+						var Tank1RangeHr1=FuelLtr/Tank1Burnltrhr1 ;
+
+						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
+
+
+
+					
 				});
 
 				var rows = document.querySelectorAll("tr.package-result2");
