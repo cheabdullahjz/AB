@@ -650,7 +650,9 @@
                         var FuelLtr = 375.00;
                         var Tank1RangeHr1_val = FuelLtr / Burnltrhr1;
 
-                        console.log(Tank1RangeHr1_val);
+                        console.log(Tank1RangeHr1, Tank1RangeHr1_val);
+
+                        document.getElementById("Tank1RangeHr1").innerHTML = Tank1RangeHr1_val;
 
                         var rows = document.querySelectorAll("tr.Tank1-row1");
                         rows.forEach(function (currentRow) {
