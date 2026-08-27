@@ -449,7 +449,7 @@
 
                 <td><input type="text" name="Tank1EngLtrHr1" id="Tank1EngLtrHr1" class="form-control" value="9" /></td>
                 <td name="Tank1RangeHr1" id="Tank1RangeHr1" class="Tank1RangeHr1" value="40"></td>
-                <td><input type="text" name="Tank1TotalRange1" id="Tank1TotalRange1" class="form-control" value="367" />
+                <td name="Tank1TotalRange1" id="Tank1TotalRange1" value="367" />
                 </td>
                 <td><input type="text" name="Tank1RangeMile1" id="Tank1RangeMile1" class="form-control" value="367" />
                 </td>
@@ -641,13 +641,31 @@
                 var rows = document.querySelectorAll("tr.package-result1");
                 rows.forEach(function (currentRow) {
                     currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
-
+                    var Kn1 = Number(currentRow.querySelector('#Kn1').value);
                     var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
 
                     var rows = document.querySelectorAll("tr.Tank1-row1");
                     rows.forEach(function (currentRow) {
 
-                        var Tank1RangeHr1 = Number(currentRow.querySelector('#Tank1RangeHr1').value);
+
+                        var Tank1EngLtrHr1 = Number(currentRow.querySelector('#Tank1EngLtrHr1').value);
+						var Tank1RangeHr1 = Number(currentRow.querySelector('#Tank1RangeHr1').value);
+						var Tank1RangeMile1 = Number(currentRow.querySelector('#Tank1RangeMile1').value);
+						var Tank1TripVol1 = Number(currentRow.querySelector('#Tank1TripVol1').value);
+						var Tank1FuelCost1 = Number(currentRow.querySelector('#Tank1FuelCost1').value);
+						var Tank1TripTime1 = Number(currentRow.querySelector('#Tank1TripTime1').value);
+						var Tank1LtrKn1 = Number(currentRow.querySelector('#Tank1LtrKn1').value);
+						var Tank1PoundLtr1 = Number(currentRow.querySelector('#Tank1PoundLtr1').value);
+						var Tank1KnGall1 = Number(currentRow.querySelector('#Tank1KnGall1').value);
+						var Tank1FuelMile1 = Number(currentRow.querySelector('#Tank1FuelMile1').value);
+						var Tank1PoundMile1 = Number(currentRow.querySelector('#Tank1PoundMile1').value);
+						var Tank1ServiceHr1 = Number(currentRow.querySelector('#Tank1ServiceHr1').value);
+						var Tank1SternHr1 = Number(currentRow.querySelector('#Tank1SternHr1').value);
+						var Tank1EngHr1 = Number(currentRow.querySelector('#Tank1EngHr1').value);
+						var Tank1MecTotMile1 = Number(currentRow.querySelector('#Tank1MecTotMile1').value);
+						var Tank1TotCost1 = Number(currentRow.querySelector('#Tank1TotCost1').value);
+						var Tank1TotCost21 = Number(currentRow.querySelector('#Tank1TotCost21').value);
+						var Tank1Time1 = Number(currentRow.querySelector('#Tank1Time1').value);
 
 
                         var FuelLtr = 375.00;
@@ -658,6 +676,13 @@
 
                         document.getElementById("Tank1RangeHr1").style.color = "red";
                         document.getElementById("Tank1RangeHr1").innerHTML= Tank1RangeHr1_val;
+
+
+
+                        var Tank1TotalRange1_val=(FuelLtr/Tank1EngLtrHr1)*Kn1;
+
+                        document.getElementById("Tank1TotalRange1").style.color = "red";
+                        document.getElementById("Tank1TotalRange1").innerHTML= Tank1TotalRange1_val;
 
 
 
