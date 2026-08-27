@@ -1445,12 +1445,12 @@ function getValues() {
 						if (isNaN(FuelLtr) || isNaN(Tank1Burnltrhr1)) {
                         return;
                     	}
-						Tank1RangeHr1=FuelLtr/Tank1Burnltrhr1 ;
+						var Tank1RangeHr1_val=FuelLtr/Tank1Burnltrhr1 ;
 
 						
 
 						currentRow.querySelector("#Tank1EngLtrHr1").innerHTML = Tank1EngLtrHr1;
-						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1;
+						currentRow.querySelector("#Tank1RangeHr1").innerHTML = Tank1RangeHr1_val;
 						currentRow.querySelector("#Tank1RangeMile1").innerHTML = Tank1RangeMile1;
 						currentRow.querySelector("#Tank1TripVol1").innerHTML = Tank1TripVol1;
 						currentRow.querySelector("#Tank1FuelCost1").innerHTML = Tank1FuelCost1;
