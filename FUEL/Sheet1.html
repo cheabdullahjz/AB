@@ -1217,37 +1217,37 @@
                     var Kn1 = Number(currentRow.querySelector('#Kn1').value);
                     var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
 
-                    var rows = document.querySelectorAll("tr.Tank1-row1");
+                    var rows = document.querySelectorAll("tr.Tank1-row2");
                     rows.forEach(function (currentRow) {
 
-                        currentRow.querySelector("#Tank1Kn1").innerHTML = Kn1;
-                        currentRow.querySelector("#Tank1BurnLtrHr1").innerHTML = Burnltrhr1;
+                        currentRow.querySelector("#Tank1Kn2").innerHTML = Kn1;
+                        currentRow.querySelector("#Tank1BurnLtrHr2").innerHTML = Burnltrhr1;
                     });
 
-                    var rows = document.querySelectorAll("tr.Tank2-row1");
+                    var rows = document.querySelectorAll("tr.Tank2-row2");
                     rows.forEach(function (currentRow) {
 
-                        currentRow.querySelector("#Tank2Kn1").innerHTML = Kn1;
-                        currentRow.querySelector("#Tank2BurnLtrHr1").innerHTML = Burnltrhr1;
+                        currentRow.querySelector("#Tank2Kn2").innerHTML = Kn1;
+                        currentRow.querySelector("#Tank2BurnLtrHr2").innerHTML = Burnltrhr1;
                     });
 
-                    var plus30percent1_val = Kn1 * 1.3;
-                    currentRow.querySelector("#plus30percent1").innerHTML = plus30percent1_val;
+                    var plus30percent2_val = Kn1 * 1.3;
+                    currentRow.querySelector("#plus30percent2").innerHTML = plus30percent2_val;
 
-                    var FuelRange1_val = ((Journey / (Burnltrhr1 * 2) * 2) * Kn1);
-                    currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1_val;
+                    var FuelRange2_val = ((Journey / (Burnltrhr1 * 2) * 2) * Kn1);
+                    currentRow.querySelector("#FuelRange2").innerHTML = FuelRange2_val;
 
-                    var PercentUsed1_val = ((Journey / (FuelRange1_val * 2) * 2) * Kn1);
-                    currentRow.querySelector("#PercentUsed1").innerHTML = PercentUsed1_val;
+                    var PercentUsed2_val = ((Journey / (FuelRange2_val * 2) * 2) * Kn1);
+                    currentRow.querySelector("#PercentUsed2").innerHTML = PercentUsed2_val;
 
-                    var Burned1_val = TotalFuel - Remaining1;
-                    currentRow.querySelector("#Burned1").innerHTML = Burned1_val;
+                    var Burned2_val = TotalFuel - Remaining2;
+                    currentRow.querySelector("#Burned2").innerHTML = Burned2_val;
 
-                    var Time1_val = Journey / Kn1;
-                    currentRow.querySelector("#Time1").innerHTML = Time1_val;
+                    var Time2_val = Journey / Kn1;
+                    currentRow.querySelector("#Time2").innerHTML = Time2_val;
 
-                    var Cost1_val = CostLtr * Burned1_val;
-                    currentRow.querySelector("#Cost1").innerHTML = Cost1_val;
+                    var Cost2_val = CostLtr * Burned2_val;
+                    currentRow.querySelector("#Cost2").innerHTML = Cost2_val;
 
                 });
 
@@ -1436,7 +1436,7 @@
                         <!--       -->
 
                     });
-                });    
+                });
 
 
 
