@@ -395,7 +395,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn1" id="Tank2Kn1" value="9"></td>
                 <td name="Tank2BurnLtrHr1" id="Tank2BurnLtrHr1" value="9"></td>
@@ -432,7 +432,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn2" id="Tank2Kn2" value="9"></td>
                 <td name="Tank2BurnLtrHr2" id="Tank2BurnLtrHr2" value="9"></td>
@@ -469,7 +469,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn3" id="Tank2Kn3" value="9"></td>
                 <td name="Tank2BurnLtrHr3" id="Tank2BurnLtrHr3" value="9"></td>
@@ -506,7 +506,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn4" id="Tank2Kn4" value="9"></td>
                 <td name="Tank2BurnLtrHr4" id="Tank2BurnLtrHr4" value="9"></td>
@@ -543,7 +543,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn5" id="Tank2Kn5" value="9"></td>
                 <td name="Tank2BurnLtrHr5" id="Tank2BurnLtrHr5" value="9"></td>
@@ -580,7 +580,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn6" id="Tank2Kn6" value="9"></td>
                 <td name="Tank2BurnLtrHr6 id="Tank2BurnLtrHr6" value="9"></td>
@@ -617,7 +617,7 @@
                 <th id="1141274793R2" style="height: 19px;" class="row-headers-background">
                     <div class="row-header-wrapper" style="line-height: 19px">3</div>
                 </th>
-                <td class="s33" dir="ltr">Engine1Tank1</td>
+                <td class="s33" dir="ltr">Engine2Tank2</td>
 
                 <td name="Tank2Kn7" id="Tank2Kn7" value="9"></td>
                 <td name="Tank2BurnLtrHr7" id="Tank2BurnLtrHr7" value="9"></td>
@@ -723,12 +723,9 @@
             var rows = document.querySelectorAll("tr.userinput-row");
             rows.forEach(function (currentRow) {
 
-
-
                 var Journey = Number(currentRow.querySelector('#Journey').value);
                 var TotalFuel = Number(currentRow.querySelector('#TotalFuel').value);
                 var CostLtr = Number(currentRow.querySelector('#CostLtr').value);
-
 
                 var plus330percent1 = 0;
                 var FuelRange1 = 0;
@@ -741,8 +738,6 @@
                 if (isNaN(Journey) || isNaN(TotalFuel) || isNaN(CostLtr)) {
                     return;
                 }
-
-                
 
                 var rows = document.querySelectorAll("tr.package-result1");
                 rows.forEach(function (currentRow) {
@@ -783,9 +778,6 @@
 
                     var Cost1_val =CostLtr*Burned1_val;
                     currentRow.querySelector("#Cost1").innerHTML = Cost1_val;
-
-               
-
 
                 });
 
@@ -883,14 +875,8 @@
                         document.getElementById("Tank1Time1").style.color = "blue";
                         document.getElementById("Tank1Time1").innerHTML = Tank1Time1_val;
 
-
-
-
                         <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
                         <!--       -->
-
-
-
 
                     });
 
@@ -982,14 +968,8 @@
                         document.getElementById("Tank2Time1").style.color = "blue";
                         document.getElementById("Tank2Time1").innerHTML = Tank2Time1_val;
 
-
-
-
                         <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
                         <!--       -->
-
-
-
 
                     });
                 });
