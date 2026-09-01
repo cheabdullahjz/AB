@@ -1576,7 +1576,7 @@
 
                         var Tank1TotCost3_val = Tank1MecTotMile3_val + Tank1PoundMile3_val;
                         document.getElementById("Tank1TotCost3").style.color = "red";
-                        document.getElementById("Tank1TotCost3").innerHTML = Tank1TotCost3val;
+                        document.getElementById("Tank1TotCost3").innerHTML = Tank1TotCost3_val;
 
                         var Tank1TotCost3val = Tank1MecTotMile3_val * Tank1PoundMile3_val;
                         document.getElementById("Tank1TotCost3").style.color = "green";
@@ -1868,7 +1868,7 @@
                         document.getElementById("Tank2TotalRange4").style.color = "green";
                         document.getElementById("Tank2TotalRange4").innerHTML = Tank2TotalRange4_val;
 
-                        var Tank2RangeMile4_val = Tank2RangeHr4_val * Kn3;
+                        var Tank2RangeMile4_val = Tank2RangeHr4_val * Kn4;
                         document.getElementById("Tank2RangeMile4").style.color = "blue";
                         document.getElementById("Tank2RangeMile4").innerHTML = Tank2RangeMile4_val;
 
@@ -1920,6 +1920,247 @@
                         var Tank2Time4_val = Journey + Journey * Kn4;
                         document.getElementById("Tank2Time4").style.color = "blue";
                         document.getElementById("Tank2Time4").innerHTML = Tank2Time4_val;
+
+                        <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
+                        <!--       -->
+
+                    });
+                });
+
+
+
+
+
+
+
+
+
+
+                if (isNaN(Journey) || isNaN(TotalFuel) || isNaN(CostLtr)) {
+                    return;
+                }
+
+                var rows = document.querySelectorAll("tr.package-result5");
+                rows.forEach(function (currentRow) {
+                    currentRow.querySelector("#FuelRange5").innerHTML = FuelRange5;
+
+                    var Kn5 = Number(currentRow.querySelector('#Kn5').value);
+                    var Burnltrhr5 = Number(currentRow.querySelector('#Burnltrhr5').value);
+
+                    var rows = document.querySelectorAll("tr.Tank1-row5");
+                    rows.forEach(function (currentRow) {
+
+                        currentRow.querySelector("#Tank1Kn5").innerHTML = Kn5;
+                        currentRow.querySelector("#Tank1BurnLtrHr5").innerHTML = Burnltrhr5;
+                    });
+
+                    var rows = document.querySelectorAll("tr.Tank2-row5");
+                    rows.forEach(function (currentRow) {
+
+                        currentRow.querySelector("#Tank2Kn5").innerHTML = Kn5;
+                        currentRow.querySelector("#Tank2BurnLtrHr5").innerHTML = Burnltrhr5;
+                    });
+
+                    var plus30percent5_val = Kn5 * 1.3;
+                    currentRow.querySelector("#plus30percent5").innerHTML = plus30percent5_val;
+
+                    var FuelRange5_val = ((Journey / (Burnltrhr5 * 2) * 2) * Kn5);
+                    currentRow.querySelector("#FuelRange5").innerHTML = FuelRange5_val;
+
+                    var PercentUsed5_val = ((Journey / (FuelRange5_val * 2) * 2) * Kn5);
+                    currentRow.querySelector("#PercentUsed5").innerHTML = PercentUsed5_val;
+
+                    var Burned5_val = TotalFuel - Remaining5;
+                    currentRow.querySelector("#Burned5").innerHTML = Burned5_val;
+
+                    var Time5_val = Journey / Kn4;
+                    currentRow.querySelector("#Time5").innerHTML = Time5_val;
+
+                    var Cost5_val = CostLtr * Burned5_val;
+                    currentRow.querySelector("#Cost5").innerHTML = Cost5_val;
+
+                });
+
+                var rows = document.querySelectorAll("tr.package-result5");
+                rows.forEach(function (currentRow) {
+                    currentRow.querySelector("#FuelRange5").innerHTML = FuelRange5;
+                    var Kn5= Number(currentRow.querySelector('#Kn5').value);
+                    var Burnltrhr5 = Number(currentRow.querySelector('#Burnltrhr5').value);
+
+                    var rows = document.querySelectorAll("tr.Tank1-row5");
+                    rows.forEach(function (currentRow) {
+
+                        var Tank1EngLtrHr5 = Number(currentRow.querySelector('#Tank1EngLtrHr5').value);
+                        var Tank1RangeHr5 = Number(currentRow.querySelector('#Tank1RangeHr5').value);
+                        var Tank1RangeMile5 = Number(currentRow.querySelector('#Tank1RangeMile5').value);
+                        var Tank1TripVol5 = Number(currentRow.querySelector('#Tank1TripVol5').value);
+                        var Tank1FuelCost5 = Number(currentRow.querySelector('#Tank1FuelCost5').value);
+                        var Tank1TripTime5 = Number(currentRow.querySelector('#Tank1TripTime5').value);
+                        var Tank1LtrKn5 = Number(currentRow.querySelector('#Tank1LtrKn5').value);
+                        var Tank1PoundLtr5 = Number(currentRow.querySelector('#Tank1PoundLtr5').value);
+                        var Tank1KnGall5 = Number(currentRow.querySelector('#Tank1KnGall5').value);
+                        var Tank1FuelMile5 = Number(currentRow.querySelector('#Tank1FuelMile5').value);
+                        var Tank1PoundMile5 = Number(currentRow.querySelector('#Tank1PoundMile5').value);
+                        var Tank1ServiceHr5 = Number(currentRow.querySelector('#Tank1ServiceHr5').value);
+                        var Tank1SternHr5 = Number(currentRow.querySelector('#Tank1SternHr5').value);
+                        var Tank1EngHr5 = Number(currentRow.querySelector('#Tank1EngHr5').value);
+                        var Tank1MecTotMile5 = Number(currentRow.querySelector('#Tank1MecTotMile5').value);
+                        var Tank1TotCost5 = Number(currentRow.querySelector('#Tank1TotCost5').value);
+                        var Tank1TotCost25 = Number(currentRow.querySelector('#Tank1TotCost25').value);
+                        var Tank1Time5 = Number(currentRow.querySelector('#Tank1Time5').value);
+
+                        var FuelLtr = 375.00;
+                        var Tank1RangeHr5_val = FuelLtr / Burnltrhr5;
+
+                        document.getElementById("Tank1RangeHr5").style.color = "red";
+                        document.getElementById("Tank1RangeHr5").innerHTML = Tank1RangeHr5_val;
+
+                        var Tank1TotalRange5_val = (FuelLtr / Tank1EngLtrHr5) * Kn5;
+                        document.getElementById("Tank1TotalRange5").style.color = "green";
+                        document.getElementById("Tank1TotalRange5").innerHTML = Tank1TotalRange5_val;
+
+                        var Tank1RangeMile5_val = Tank1RangeHr5_val * Kn4;
+                        document.getElementById("Tank1RangeMile5").style.color = "blue";
+                        document.getElementById("Tank1RangeMile5").innerHTML = Tank1RangeMile5_val;
+
+                        var Tank1TripVol5_val = (Journey / Kn5) * Tank1EngLtrHr5;
+                        document.getElementById("Tank1TripVol5").style.color = "red";
+                        document.getElementById("Tank1TripVol5").innerHTML = Tank1TripVol5_val;
+
+                        var Tank1FuelCost5_val = Tank1TripVol5_val * Tank1PoundLtr5;
+                        document.getElementById("Tank1FuelCost5").style.color = "green";
+                        document.getElementById("Tank1FuelCost5").innerHTML = Tank1FuelCost5_val;
+
+                        var Tank1TripTime5_val = Journey * Kn5;
+                        document.getElementById("Tank1TripTime5").style.color = "blue";
+                        document.getElementById("Tank1TripTime5").innerHTML = Tank1TripTime5_val;
+
+                        var Tank1LtrKn5_val = Tank1EngLtrHr5 / Kn5;
+                        document.getElementById("Tank1LtrKn5").style.color = "red";
+                        document.getElementById("Tank1LtrKn5").innerHTML = Tank1LtrKn5_val;
+
+                        var Tank1KnGall5_val = (Kn5 * 1.15078) / (Tank1EngLtrHr5 / 4.54);
+                        document.getElementById("Tank1KnGall5").style.color = "green";
+                        document.getElementById("Tank1KnGall5").innerHTML = Tank1KnGall5_val;
+
+                        var Tank1FuelMile5_val = Tank1LtrKn5_val / Tank1PoundLtr5;
+                        document.getElementById("Tank1FuelMile5").style.color = "blue";
+                        document.getElementById("Tank1FuelMile5").innerHTML = Tank1FuelMile5_val;
+
+                        var Tank1PoundMile5_val = Tank1LtrKn5_val * Tank1PoundLtr5;
+                        document.getElementById("Tank1PoundMile5").style.color = "red";
+                        document.getElementById("Tank1PoundMile5").innerHTML = Tank1PoundMile5_val;
+
+                        var Tank1SternHr5_val = (16000 / 4000) / Kn5;
+                        document.getElementById("Tank1SternHr5").style.color = "green";
+                        document.getElementById("Tank1SternHr5").innerHTML = Tank1SternHr5_val;
+
+                        var Tank1MecTotMile5_val = (Tank1ServiceHr5 + Tank1SternHr5_val + Tank1EngHr5) / Kn5;
+                        document.getElementById("Tank1MecTotMile5").style.color = "blue";
+                        document.getElementById("Tank1MecTotMile5").innerHTML = Tank1MecTotMile5_val;
+
+                        var Tank1TotCost5_val = Tank1MecTotMile5_val + Tank1PoundMile5_val;
+                        document.getElementById("Tank1TotCost5").style.color = "red";
+                        document.getElementById("Tank1TotCost5").innerHTML = Tank1TotCost5_val;
+
+                        var Tank1TotCost5_val = Tank1MecTotMile5_val * Tank1PoundMile5_val;
+                        document.getElementById("Tank1TotCost5").style.color = "green";
+                        document.getElementById("Tank1TotCost5").innerHTML = Tank1TotCost5_val;
+
+                        var Tank1Time5_val = Journey + Journey * Kn5;
+                        document.getElementById("Tank1Time5").style.color = "blue";
+                        document.getElementById("Tank1Time5").innerHTML = Tank1Time5_val;
+
+                        <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
+                        <!--       -->
+
+                    });
+
+                    var rows = document.querySelectorAll("tr.Tank2-row5");
+                    rows.forEach(function (currentRow) {
+
+                        var Tank2EngLtrHr5 = Number(currentRow.querySelector('#Tank2EngLtrHr5').value);
+                        var Tank2RangeHr5 = Number(currentRow.querySelector('#Tank2RangeHr5').value);
+                        var Tank2RangeMile5 = Number(currentRow.querySelector('#Tank2RangeMile5').value);
+                        var Tank2TripVol5 = Number(currentRow.querySelector('#Tank2TripVol5').value);
+                        var Tank2FuelCost5 = Number(currentRow.querySelector('#Tank2FuelCost5').value);
+                        var Tank2TripTime5 = Number(currentRow.querySelector('#Tank2TripTime5').value);
+                        var Tank2LtrKn5 = Number(currentRow.querySelector('#Tank2LtrKn5').value);
+                        var Tank2PoundLtr5 = Number(currentRow.querySelector('#Tank2PoundLtr5').value);
+                        var Tank2KnGall5 = Number(currentRow.querySelector('#Tank2KnGall5').value);
+                        var Tank2FuelMile5 = Number(currentRow.querySelector('#Tank2FuelMile5').value);
+                        var Tank2PoundMile5 = Number(currentRow.querySelector('#Tank2PoundMile5').value);
+                        var Tank2ServiceHr5 = Number(currentRow.querySelector('#Tank2ServiceHr5').value);
+                        var Tank2SternHr5 = Number(currentRow.querySelector('#Tank2SternHr5').value);
+                        var Tank2EngHr5 = Number(currentRow.querySelector('#Tank2EngHr5').value);
+                        var Tank2MecTotMile5 = Number(currentRow.querySelector('#Tank2MecTotMile5').value);
+                        var Tank2TotCost5 = Number(currentRow.querySelector('#Tank2TotCost5').value);
+                        var Tank2TotCost25 = Number(currentRow.querySelector('#Tank2TotCost25').value);
+                        var Tank2Time5 = Number(currentRow.querySelector('#Tank2Time5').value);
+
+
+                        var FuelLtr = 375.00;
+                        var Tank2RangeHr5_val = FuelLtr / Burnltrhr5;
+
+                        document.getElementById("Tank2RangeHr5").style.color = "red";
+                        document.getElementById("Tank2RangeHr5").innerHTML = Tank2RangeHr5_val;
+
+                        var Tank2TotalRange5_val = (FuelLtr / Tank2EngLtrHr5) * Kn5;
+                        document.getElementById("Tank2TotalRange5").style.color = "green";
+                        document.getElementById("Tank2TotalRange5").innerHTML = Tank2TotalRange5_val;
+
+                        var Tank2RangeMile5_val = Tank2RangeHr5_val * Kn5;
+                        document.getElementById("Tank2RangeMile5").style.color = "blue";
+                        document.getElementById("Tank2RangeMile5").innerHTML = Tank2RangeMile5_val;
+
+                        var Tank2TripVol5_val = (Journey / Kn5) * Tank2EngLtrHr5;
+                        document.getElementById("Tank2TripVol5").style.color = "red";
+                        document.getElementById("Tank2TripVol5").innerHTML = Tank2TripVol5_val;
+
+                        var Tank2FuelCost5_val = Tank2TripVol5_val * Tank2PoundLtr5;
+                        document.getElementById("Tank2FuelCost5").style.color = "green";
+                        document.getElementById("Tank2FuelCost5").innerHTML = Tank2FuelCost5_val;
+
+                        var Tank2TripTime5_val = Journey * Kn5;
+                        document.getElementById("Tank2TripTime5").style.color = "blue";
+                        document.getElementById("Tank2TripTime5").innerHTML = Tank2TripTime5_val;
+
+                        var Tank2LtrKn5_val = Tank2EngLtrHr5 / Kn5;
+                        document.getElementById("Tank2LtrKn5").style.color = "red";
+                        document.getElementById("Tank2LtrKn5").innerHTML = Tank2LtrKn5_val;
+
+                        var Tank2KnGall5_val = (Kn5 * 1.15078) / (Tank2EngLtrHr5 / 4.54);
+                        document.getElementById("Tank2KnGall5").style.color = "green";
+                        document.getElementById("Tank2KnGall5").innerHTML = Tank2KnGall5_val;
+
+                        var Tank2FuelMile5_val = Tank2LtrKn5_val / Tank2PoundLtr5;
+                        document.getElementById("Tank2FuelMile5").style.color = "blue";
+                        document.getElementById("Tank2FuelMile5").innerHTML = Tank2FuelMile5_val;
+
+
+                        var Tank2PoundMile5_val = Tank2LtrKn5_val * Tank2PoundLtr5;
+                        document.getElementById("Tank2PoundMile5").style.color = "red";
+                        document.getElementById("Tank2PoundMile5").innerHTML = Tank2PoundMile5_val;
+
+                        var Tank2SternHr5_val = (16000 / 4000) / Kn4;
+                        document.getElementById("Tank2SternHr5").style.color = "green";
+                        document.getElementById("Tank2SternHr5").innerHTML = Tank2SternHr5_val;
+
+                        var Tank2MecTotMile5_val = (Tank2ServiceHr5 + Tank2SternHr5_val + Tank2EngHr5) / Kn5;
+                        document.getElementById("Tank2MecTotMile5").style.color = "blue";
+                        document.getElementById("Tank2MecTotMile5").innerHTML = Tank2MecTotMile5_val;
+
+                        var Tank2TotCost5_val = Tank2MecTotMile5_val + Tank2PoundMile5_val;
+                        document.getElementById("Tank2TotCost5").style.color = "red";
+                        document.getElementById("Tank2TotCost5").innerHTML = Tank2TotCost5_val;
+
+                        var Tank2TotCost5_val = Tank2MecTotMile5_val * Tank2PoundMile5_val;
+                        document.getElementById("Tank2TotCost5").style.color = "green";
+                        document.getElementById("Tank2TotCost5").innerHTML = Tank2TotCost5_val;
+
+                        var Tank2Time5_val = Journey + Journey * Kn5;
+                        document.getElementById("Tank2Time5").style.color = "blue";
+                        document.getElementById("Tank2Time5").innerHTML = Tank2Time5_val;
 
                         <!--   console.log(Tank1TripVol1_val,Tank1PoundLtr1, Tank1FuelCost1_val);    -->
                         <!--       -->
