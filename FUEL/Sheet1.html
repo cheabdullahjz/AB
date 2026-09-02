@@ -992,7 +992,6 @@
 
                 var rows = document.querySelectorAll("tr.package-result1");
                 rows.forEach(function (currentRow) {
-                    currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1;
 
                     var Kn1 = Number(currentRow.querySelector('#Kn1').value);
                     var Burnltrhr1 = Number(currentRow.querySelector('#Burnltrhr1').value);
@@ -1015,11 +1014,13 @@
                     plus30percent1_val=(Math.round(plus30percent1_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#plus30percent1").innerHTML = plus30percent1_val;
 
-                    var FuelRange1_val = ((Journey / (Burnltrhr1 * 2) * 2) * Kn1);
+                
+
+                    var FuelRange1_val = ((TotalFuel / (Burnltrhr1 * 2) * 2) * Kn1);
                     FuelRange1_val=(Math.round(FuelRange1_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#FuelRange1").innerHTML = FuelRange1_val;
 
-                    var PercentUsed1_val = ((Journey / (FuelRange1_val * 2) * 2) * Kn1);
+                    var PercentUsed1_val = (((Journey / (FuelRange1_val * 2)) * 2) * Kn1);
                     PercentUsed1_val=(Math.round(PercentUsed1_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed1").innerHTML = PercentUsed1_val;
 
