@@ -1127,7 +1127,7 @@
                         document.getElementById("Tank1SternHr1").style.color = "green";
                         document.getElementById("Tank1SternHr1").innerHTML = Tank1SternHr1_val;
 
-                        var Tank1MecTotMile1_val = (Tank1ServiceHr1 * Tank1SternHr1_val * Tank1EngHr1) / Kn1;
+                        var Tank1MecTotMile1_val = (parseInt(Tank1ServiceHr1) + parseInt(Tank1SternHr1_val) + parseInt(Tank1EngHr1)) / Kn1;
 
                         console.log(" 1 ",Tank1ServiceHr1,Tank1SternHr1_val,Tank1EngHr1,Kn1);
 
