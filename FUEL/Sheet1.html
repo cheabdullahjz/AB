@@ -1400,11 +1400,11 @@
                         document.getElementById("Tank1MecTotMile2").innerHTML = Tank1MecTotMile2_val;
 
                         var Tank1TotCost2_val = Tank1MecTotMile2_val + Tank1PoundMile2_val;
-                        Tank1TotCost1_val=(Math.round(Tank1TotCost2_val * 100) / 100).toFixed(2); 
+                        Tank1TotCost2_val=(Math.round(Tank1TotCost2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1TotCost2").style.color = "red";
                         document.getElementById("Tank1TotCost2").innerHTML = Tank1TotCost2_val;
 
-                        var Tank1TotCost22_val = Tank1TotCost1_val * Journey;
+                        var Tank1TotCost22_val = Tank1TotCost2_val * Journey;
                         Tank1TotCost22_val=(Math.round(Tank1TotCost22_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1TotCost22").style.color = "green";
                         document.getElementById("Tank1TotCost22").innerHTML = Tank1TotCost22_val;
@@ -1510,10 +1510,10 @@
                         document.getElementById("Tank2TotCost2").style.color = "red";
                         document.getElementById("Tank2TotCost2").innerHTML = Tank2TotCost2_val;
 
-                        var Tank2TotCost2_val = Tank2TotCost2_val * Journey;
-                        Tank2TotCost2_val=(Math.round(Tank2TotCost2_val * 100) / 100).toFixed(2); 
-                        document.getElementById("Tank2TotCost2").style.color = "green";
-                        document.getElementById("Tank2TotCost2").innerHTML = Tank2TotCost2_val;
+                        var Tank2TotCost22_val = Tank2TotCost2_val * Journey;
+                        Tank2TotCost22_val=(Math.round(Tank2TotCost22_val * 100) / 100).toFixed(2); 
+                        document.getElementById("Tank2TotCost22").style.color = "green";
+                        document.getElementById("Tank2TotCost22").innerHTML = Tank2TotCost22_val;
 
                         var Tank2Time2_val = Journey + Journey * Kn2;
                         Tank2Time2_val=(Math.round(Tank2Time2_val * 100) / 100).toFixed(2); 
