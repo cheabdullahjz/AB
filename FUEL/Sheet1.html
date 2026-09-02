@@ -176,7 +176,7 @@
                 <td><input type="text" name="Tank1EngHr1" id="Tank1EngHr1" class="form-control" value="4.87" /></td>
                 <td name="Tank1MecTotMile1" id="Tank1MecTotMile1" value="0.62"></td>
                 <td name="Tank1TotCost1" id="Tank1TotCost1" value="1.58"></td>
-                <td name="Tank1TotCost21" id="Tank1TotCost21" value="474.05">
+                <td name="Tank1TotCost12" id="Tank1TotCost12" value="474.05">
                 </td>
                 <td name="Tank1Time1" id="Tank1Time1" value="32.6"></td>
             </tr>
@@ -1062,7 +1062,7 @@
                         var Tank1EngHr1 = Number(currentRow.querySelector('#Tank1EngHr1').value);
                         var Tank1MecTotMile1 = Number(currentRow.querySelector('#Tank1MecTotMile1').value);
                         var Tank1TotCost1 = Number(currentRow.querySelector('#Tank1TotCost1').value);
-                        var Tank1TotCost21 = Number(currentRow.querySelector('#Tank1TotCost21').value);
+                        var Tank1TotCost12 = Number(currentRow.querySelector('#Tank1TotCost12').value);
                         var Tank1Time1 = Number(currentRow.querySelector('#Tank1Time1').value);
 
                         var FuelLtr = 375.00;
@@ -1122,22 +1122,27 @@
                         document.getElementById("Tank1PoundMile1").innerHTML = Tank1PoundMile1_val;
 
                         var Tank1SternHr1_val = (16000 / 4000) / Kn1;
+                        Tank1SternHr1_val=(Math.round(Tank1SternHr1_val * 100) / 100).toFixed(2);  
                         document.getElementById("Tank1SternHr1").style.color = "green";
                         document.getElementById("Tank1SternHr1").innerHTML = Tank1SternHr1_val;
 
                         var Tank1MecTotMile1_val = (Tank1ServiceHr1 + Tank1SternHr1_val + Tank1EngHr1) / Kn1;
+                        Tank1MecTotMile1_val=(Math.round(Tank1MecTotMile1_val * 100) / 100).toFixed(2);  
                         document.getElementById("Tank1MecTotMile1").style.color = "blue";
                         document.getElementById("Tank1MecTotMile1").innerHTML = Tank1MecTotMile1_val;
 
                         var Tank1TotCost1_val = Tank1MecTotMile1_val + Tank1PoundMile1_val;
+                        Tank1TotCost1_val=(Math.round(Tank1TotCost1_val * 100) / 100).toFixed(2);  
                         document.getElementById("Tank1TotCost1").style.color = "red";
                         document.getElementById("Tank1TotCost1").innerHTML = Tank1TotCost1_val;
 
-                        var Tank1TotCost1_val = Tank1MecTotMile1_val * Tank1PoundMile1_val;
-                        document.getElementById("Tank1TotCost1").style.color = "green";
-                        document.getElementById("Tank1TotCost1").innerHTML = Tank1TotCost1_val;
+                        var Tank1TotCost12_val = Tank1TotCost1_val * Journey;
+                        Tank1TotCost12_val=(Math.round(Tank1TotCost12_val * 100) / 100).toFixed(2);  
+                        document.getElementById("Tank1TotCost12").style.color = "green";
+                        document.getElementById("Tank1TotCost12").innerHTML = Tank1TotCost12_val;
 
                         var Tank1Time1_val = Journey + Journey * Kn1;
+                        Tank1Time1_val=(Math.round(Tank1Time1_val * 100) / 100).toFixed(2);  
                         document.getElementById("Tank1Time1").style.color = "blue";
                         document.getElementById("Tank1Time1").innerHTML = Tank1Time1_val;
 
@@ -1223,22 +1228,27 @@
                         document.getElementById("Tank2PoundMile1").innerHTML = Tank2PoundMile1_val;
 
                         var Tank2SternHr1_val = (16000 / 4000) / Kn1;
+                        Tank2SternHr1_val=(Math.round(Tank2SternHr1_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2SternHr1").style.color = "green";
                         document.getElementById("Tank2SternHr1").innerHTML = Tank2SternHr1_val;
 
                         var Tank2MecTotMile1_val = (Tank2ServiceHr1 + Tank2SternHr1_val + Tank2EngHr1) / Kn1;
+                        Tank2MecTotMile1_val=(Math.round(Tank2MecTotMile1_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2MecTotMile1").style.color = "blue";
                         document.getElementById("Tank2MecTotMile1").innerHTML = Tank2MecTotMile1_val;
 
                         var Tank2TotCost1_val = Tank2MecTotMile1_val + Tank2PoundMile1_val;
+                        Tank2TotCost1_val=(Math.round(Tank2TotCost1_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2TotCost1").style.color = "red";
                         document.getElementById("Tank2TotCost1").innerHTML = Tank2TotCost1_val;
 
-                        var Tank2TotCost1_val = Tank2MecTotMile1_val * Tank2PoundMile1_val;
-                        document.getElementById("Tank2TotCost1").style.color = "green";
-                        document.getElementById("Tank2TotCost1").innerHTML = Tank2TotCost1_val;
+                        var Tank2TotCost12_val = Tank2TotCost1_val * Journey;
+                        Tank2TotCost12_val=(Math.round(Tank2TotCost12_val * 100) / 100).toFixed(2); 
+                        document.getElementById("Tank2TotCost12").style.color = "green";
+                        document.getElementById("Tank2TotCost12").innerHTML = Tank2TotCost12_val;
 
                         var Tank2Time1_val = Journey + Journey * Kn1;
+                        Tank2Time1_val=(Math.round(Tank2Time1_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2Time1").style.color = "blue";
                         document.getElementById("Tank2Time1").innerHTML = Tank2Time1_val;
 
@@ -1380,22 +1390,27 @@
                         document.getElementById("Tank1PoundMile2").innerHTML = Tank1PoundMile2_val;
 
                         var Tank1SternHr2_val = (16000 / 4000) / Kn2;
+                        Tank1SternHr2_val=(Math.round(Tank1SternHr2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1SternHr2").style.color = "green";
                         document.getElementById("Tank1SternHr2").innerHTML = Tank1SternHr2_val;
 
                         var Tank1MecTotMile2_val = (Tank1ServiceHr2 + Tank1SternHr2_val + Tank1EngHr2) / Kn2;
+                        Tank1MecTotMile2_val=(Math.round(Tank1MecTotMile2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1MecTotMile2").style.color = "blue";
                         document.getElementById("Tank1MecTotMile2").innerHTML = Tank1MecTotMile2_val;
 
                         var Tank1TotCost2_val = Tank1MecTotMile2_val + Tank1PoundMile2_val;
+                        Tank1TotCost1_val=(Math.round(Tank1TotCost2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1TotCost2").style.color = "red";
                         document.getElementById("Tank1TotCost2").innerHTML = Tank1TotCost2_val;
 
-                        var Tank1TotCost2_val = Tank1MecTotMile2_val * Tank1PoundMile2_val;
-                        document.getElementById("Tank1TotCost2").style.color = "green";
-                        document.getElementById("Tank1TotCost2").innerHTML = Tank1TotCost2_val;
+                        var Tank1TotCost22_val = Tank1TotCost1_val * Journey;
+                        Tank1TotCost22_val=(Math.round(Tank1TotCost22_val * 100) / 100).toFixed(2); 
+                        document.getElementById("Tank1TotCost22").style.color = "green";
+                        document.getElementById("Tank1TotCost22").innerHTML = Tank1TotCost22_val;
 
                         var Tank1Time2_val = Journey + Journey * Kn2;
+                        Tank1Time2_val=(Math.round(Tank1Time2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1Time2").style.color = "blue";
                         document.getElementById("Tank1Time2").innerHTML = Tank1Time2_val;
 
@@ -1481,22 +1496,27 @@
                         document.getElementById("Tank2PoundMile2").innerHTML = Tank2PoundMile2_val;
 
                         var Tank2SternHr2_val = (16000 / 4000) / Kn2;
+                        Tank2SternHr2_val=(Math.round(Tank2SternHr2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2SternHr2").style.color = "green";
                         document.getElementById("Tank2SternHr2").innerHTML = Tank2SternHr2_val;
 
                         var Tank2MecTotMile2_val = (Tank2ServiceHr2 + Tank2SternHr2_val + Tank2EngHr2) / Kn2;
+                        Tank2MecTotMile2_val=(Math.round(Tank2MecTotMile2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2MecTotMile2").style.color = "blue";
                         document.getElementById("Tank2MecTotMile2").innerHTML = Tank2MecTotMile2_val;
 
                         var Tank2TotCost2_val = Tank2MecTotMile2_val + Tank2PoundMile2_val;
+                        Tank2TotCost2_val=(Math.round(Tank2TotCost2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2TotCost2").style.color = "red";
                         document.getElementById("Tank2TotCost2").innerHTML = Tank2TotCost2_val;
 
-                        var Tank2TotCost2_val = Tank2MecTotMile2_val * Tank2PoundMile2_val;
+                        var Tank2TotCost2_val = Tank2TotCost2_val * Journey;
+                        Tank2TotCost2_val=(Math.round(Tank2TotCost2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2TotCost2").style.color = "green";
                         document.getElementById("Tank2TotCost2").innerHTML = Tank2TotCost2_val;
 
                         var Tank2Time2_val = Journey + Journey * Kn2;
+                        Tank2Time2_val=(Math.round(Tank2Time2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank2Time2").style.color = "blue";
                         document.getElementById("Tank2Time2").innerHTML = Tank2Time2_val;
 
@@ -1650,22 +1670,27 @@
                         document.getElementById("Tank1PoundMile3").innerHTML = Tank1PoundMile3_val;
 
                         var Tank1SternHr3_val = (16000 / 4000) / Kn3;
+                        Tank1SternHr3_val=(Math.round(Tank1SternHr3_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1SternHr3").style.color = "green";
                         document.getElementById("Tank1SternHr3").innerHTML = Tank1SternHr3_val;
 
                         var Tank1MecTotMile3_val = (Tank1ServiceHr3 + Tank1SternHr3_val + Tank1EngHr3) / Kn3;
+                        Tank1MecTotMile3_val=(Math.round(Tank1MecTotMile3_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1MecTotMile3").style.color = "blue";
                         document.getElementById("Tank1MecTotMile3").innerHTML = Tank1MecTotMile3_val;
 
                         var Tank1TotCost3_val = Tank1MecTotMile3_val + Tank1PoundMile3_val;
+                        Tank1TotCost3_val=(Math.round(Tank1TotCost3_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1TotCost3").style.color = "red";
                         document.getElementById("Tank1TotCost3").innerHTML = Tank1TotCost3_val;
 
-                        var Tank1TotCost3val = Tank1MecTotMile3_val * Tank1PoundMile3_val;
-                        document.getElementById("Tank1TotCost3").style.color = "green";
-                        document.getElementById("Tank1TotCost3").innerHTML = Tank1TotCost3_val;
+                        var Tank1TotCost23val = Tank1TotCost3_val * Journey;
+                        Tank1TotCost23val=(Math.round(Tank1TotCost23val * 100) / 100).toFixed(2); 
+                        document.getElementById("Tank1TotCost23").style.color = "green";
+                        document.getElementById("Tank1TotCost23").innerHTML = Tank1TotCost23val;
 
-                        var Tank1Time3_val = Journey + Journey * Kn2;
+                        var Tank1Time3_val = Journey + Journey * Kn3;
+                        Tank1SternHr2_val=(Math.round(Tank1SternHr2_val * 100) / 100).toFixed(2); 
                         document.getElementById("Tank1Time3").style.color = "blue";
                         document.getElementById("Tank1Time3").innerHTML = Tank1Time3_val;
 
@@ -1751,22 +1776,27 @@
                         document.getElementById("Tank2PoundMile3").innerHTML = Tank2PoundMile3_val;
 
                         var Tank2SternHr3_val = (16000 / 4000) / Kn3;
+                        Tank2SternHr3_val=(Math.round(Tank2SternHr3_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2SternHr3").style.color = "green";
                         document.getElementById("Tank2SternHr3").innerHTML = Tank2SternHr3_val;
 
                         var Tank2MecTotMile3_val = (Tank2ServiceHr3 + Tank2SternHr3_val + Tank2EngHr3) / Kn3;
+                        Tank2MecTotMile3_val=(Math.round(Tank2MecTotMile3_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2MecTotMile3").style.color = "blue";
                         document.getElementById("Tank2MecTotMile3").innerHTML = Tank2MecTotMile3_val;
 
                         var Tank2TotCost3_val = Tank2MecTotMile3_val + Tank2PoundMile3_val;
+                        Tank2TotCost3_val=(Math.round(Tank2TotCost3_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2TotCost3").style.color = "red";
                         document.getElementById("Tank2TotCost3").innerHTML = Tank2TotCost3_val;
 
-                        var Tank2TotCost3_val = Tank2MecTotMile3_val * Tank2PoundMile3_val;
-                        document.getElementById("Tank2TotCost3").style.color = "green";
-                        document.getElementById("Tank2TotCost3").innerHTML = Tank2TotCost3_val;
+                        var Tank2TotCost23_val = Tank2TotCost3_val * Journey;
+                        Tank2TotCost23_val=(Math.round(Tank2TotCost23_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank2TotCost23").style.color = "green";
+                        document.getElementById("Tank2TotCost23").innerHTML = Tank2TotCost23_val;
 
                         var Tank2Time3_val = Journey + Journey * Kn3;
+                        Tank2Time3_val=(Math.round(Tank2Time3_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2Time3").style.color = "blue";
                         document.getElementById("Tank2Time3").innerHTML = Tank2Time3_val;
 
@@ -1918,23 +1948,28 @@
                         document.getElementById("Tank1PoundMile4").style.color = "red";
                         document.getElementById("Tank1PoundMile4").innerHTML = Tank1PoundMile4_val;
 
-                        var Tank1SternHr4_val = (16000 / 4000) / Kn3;
+                        var Tank1SternHr4_val = (16000 / 4000) / Kn4;
+                        Tank1SternHr4_val=(Math.round(Tank1SternHr4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1SternHr4").style.color = "green";
                         document.getElementById("Tank1SternHr4").innerHTML = Tank1SternHr4_val;
 
                         var Tank1MecTotMile4_val = (Tank1ServiceHr4 + Tank1SternHr4_val + Tank1EngHr4) / Kn4;
+                        Tank1MecTotMile4_val=(Math.round(Tank1MecTotMile4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1MecTotMile4").style.color = "blue";
                         document.getElementById("Tank1MecTotMile4").innerHTML = Tank1MecTotMile4_val;
 
                         var Tank1TotCost4_val = Tank1MecTotMile4_val + Tank1PoundMile4_val;
+                        Tank1TotCost4_val=(Math.round(Tank1TotCost4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1TotCost4").style.color = "red";
                         document.getElementById("Tank1TotCost4").innerHTML = Tank1TotCost4_val;
 
-                        var Tank1TotCost4_val = Tank1MecTotMile4_val * Tank1PoundMile4_val;
-                        document.getElementById("Tank1TotCost4").style.color = "green";
-                        document.getElementById("Tank1TotCost4").innerHTML = Tank1TotCost4_val;
+                        var Tank1TotCost24_val = Tank1TotCost4_val * Journey;
+                        Tank1TotCost24_val=(Math.round(Tank1TotCost24_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank1TotCost24").style.color = "green";
+                        document.getElementById("Tank1TotCost24").innerHTML = Tank1TotCost24_val;
 
                         var Tank1Time4_val = Journey + Journey * Kn4;
+                        Tank1Time4_val=(Math.round(Tank1Time4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1Time4").style.color = "blue";
                         document.getElementById("Tank1Time4").innerHTML = Tank1Time4_val;
 
@@ -2020,22 +2055,27 @@
                         document.getElementById("Tank2PoundMile4").innerHTML = Tank2PoundMile4_val;
 
                         var Tank2SternHr4_val = (16000 / 4000) / Kn4;
+                        Tank2SternHr4_val=(Math.round(Tank2SternHr4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2SternHr4").style.color = "green";
                         document.getElementById("Tank2SternHr4").innerHTML = Tank2SternHr4_val;
 
                         var Tank2MecTotMile4_val = (Tank2ServiceHr4 + Tank2SternHr4_val + Tank2EngHr4) / Kn4;
+                        Tank2MecTotMile4_val=(Math.round(Tank2MecTotMile4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2MecTotMile4").style.color = "blue";
                         document.getElementById("Tank2MecTotMile4").innerHTML = Tank2MecTotMile4_val;
 
                         var Tank2TotCost4_val = Tank2MecTotMile4_val + Tank2PoundMile4_val;
+                        Tank2TotCost4_val=(Math.round(Tank2TotCost4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2TotCost4").style.color = "red";
                         document.getElementById("Tank2TotCost4").innerHTML = Tank2TotCost4_val;
 
-                        var Tank2TotCost4_val = Tank2MecTotMile4_val * Tank2PoundMile4_val;
-                        document.getElementById("Tank2TotCost4").style.color = "green";
-                        document.getElementById("Tank2TotCost4").innerHTML = Tank2TotCost4_val;
+                        var Tank2TotCost24_val = Tank2TotCost4_val * Journey;
+                        Tank2TotCost24_val=(Math.round(Tank2TotCost24_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank2TotCost24").style.color = "green";
+                        document.getElementById("Tank2TotCost24").innerHTML = Tank2TotCost24_val;
 
                         var Tank2Time4_val = Journey + Journey * Kn4;
+                        Tank2Time4_val=(Math.round(Tank2Time4_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2Time4").style.color = "blue";
                         document.getElementById("Tank2Time4").innerHTML = Tank2Time4_val;
 
@@ -2185,22 +2225,27 @@
                         document.getElementById("Tank1PoundMile5").innerHTML = Tank1PoundMile5_val;
 
                         var Tank1SternHr5_val = (16000 / 4000) / Kn5;
+                        Tank1SternHr5_val=(Math.round(Tank1SternHr5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1SternHr5").style.color = "green";
                         document.getElementById("Tank1SternHr5").innerHTML = Tank1SternHr5_val;
 
                         var Tank1MecTotMile5_val = (Tank1ServiceHr5 + Tank1SternHr5_val + Tank1EngHr5) / Kn5;
+                        Tank1MecTotMile5_val=(Math.round(Tank1MecTotMile5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1MecTotMile5").style.color = "blue";
                         document.getElementById("Tank1MecTotMile5").innerHTML = Tank1MecTotMile5_val;
 
                         var Tank1TotCost5_val = Tank1MecTotMile5_val + Tank1PoundMile5_val;
+                        Tank1TotCost5_val=(Math.round(Tank1TotCost5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1TotCost5").style.color = "red";
                         document.getElementById("Tank1TotCost5").innerHTML = Tank1TotCost5_val;
 
-                        var Tank1TotCost5_val = Tank1MecTotMile5_val * Tank1PoundMile5_val;
-                        document.getElementById("Tank1TotCost5").style.color = "green";
-                        document.getElementById("Tank1TotCost5").innerHTML = Tank1TotCost5_val;
+                        var Tank1TotCost25_val = Tank1TotCost5_val * Journey;
+                        Tank1TotCost25_val=(Math.round(Tank1TotCost25_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank1TotCost25").style.color = "green";
+                        document.getElementById("Tank1TotCost25").innerHTML = Tank1TotCost25_val;
 
                         var Tank1Time5_val = Journey + Journey * Kn5;
+                        Tank1Time5_val=(Math.round(Tank1Time5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1Time5").style.color = "blue";
                         document.getElementById("Tank1Time5").innerHTML = Tank1Time5_val;
 
@@ -2286,22 +2331,27 @@
                         document.getElementById("Tank2PoundMile5").innerHTML = Tank2PoundMile5_val;
 
                         var Tank2SternHr5_val = (16000 / 4000) / Kn5;
+                        Tank2SternHr5_val=(Math.round(Tank2SternHr5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2SternHr5").style.color = "green";
                         document.getElementById("Tank2SternHr5").innerHTML = Tank2SternHr5_val;
 
                         var Tank2MecTotMile5_val = (Tank2ServiceHr5 + Tank2SternHr5_val + Tank2EngHr5) / Kn5;
+                        Tank2MecTotMile5_val=(Math.round(Tank2MecTotMile5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2MecTotMile5").style.color = "blue";
                         document.getElementById("Tank2MecTotMile5").innerHTML = Tank2MecTotMile5_val;
 
                         var Tank2TotCost5_val = Tank2MecTotMile5_val + Tank2PoundMile5_val;
+                        Tank2TotCost5_val=(Math.round(Tank2TotCost5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2TotCost5").style.color = "red";
                         document.getElementById("Tank2TotCost5").innerHTML = Tank2TotCost5_val;
 
-                        var Tank2TotCost5_val = Tank2MecTotMile5_val * Tank2PoundMile5_val;
-                        document.getElementById("Tank2TotCost5").style.color = "green";
-                        document.getElementById("Tank2TotCost5").innerHTML = Tank2TotCost5_val;
+                        var Tank2TotCost25_val = Tank2TotCost5_val * Journey;
+                        Tank2TotCost25_val=(Math.round(Tank2TotCost25_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank2TotCost25").style.color = "green";
+                        document.getElementById("Tank2TotCost25").innerHTML = Tank2TotCost25_val;
 
                         var Tank2Time5_val = Journey + Journey * Kn5;
+                        Tank2Time5_val=(Math.round(Tank2Time5_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2Time5").style.color = "blue";
                         document.getElementById("Tank2Time5").innerHTML = Tank2Time5_val;
 
@@ -2454,22 +2504,27 @@
                         document.getElementById("Tank1PoundMile6").innerHTML = Tank1PoundMile6_val;
 
                         var Tank1SternHr6_val = (16000 / 4000) / Kn6;
+                        Tank1SternHr6_val=(Math.round(Tank1SternHr6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1SternHr6").style.color = "green";
                         document.getElementById("Tank1SternHr6").innerHTML = Tank1SternHr6_val;
 
                         var Tank1MecTotMile6_val = (Tank1ServiceHr6 + Tank1SternHr6_val + Tank1EngHr6) / Kn6;
+                        Tank1MecTotMile6_val=(Math.round(Tank1MecTotMile6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1MecTotMile6").style.color = "blue";
                         document.getElementById("Tank1MecTotMile6").innerHTML = Tank1MecTotMile6_val;
 
                         var Tank1TotCost6_val = Tank1MecTotMile6_val + Tank1PoundMile6_val;
+                        Tank1TotCost6_val=(Math.round(Tank1TotCost6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1TotCost6").style.color = "red";
                         document.getElementById("Tank1TotCost6").innerHTML = Tank1TotCost6_val;
 
-                        var Tank1TotCost6_val = Tank1MecTotMile6_val * Tank1PoundMile6_val;
-                        document.getElementById("Tank1TotCost6").style.color = "green";
-                        document.getElementById("Tank1TotCost6").innerHTML = Tank1TotCost6_val;
+                        var Tank1TotCost26_val = Tank1TotCost6_val * Journey;
+                        Tank1TotCost26_val=(Math.round(Tank1TotCost26_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank1TotCost26").style.color = "green";
+                        document.getElementById("Tank1TotCost26").innerHTML = Tank1TotCost26_val;
 
                         var Tank1Time6_val = Journey + Journey * Kn6;
+                        Tank1Time6_val=(Math.round(Tank1Time6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1Time6").style.color = "blue";
                         document.getElementById("Tank1Time6").innerHTML = Tank1Time6_val;
 
@@ -2555,22 +2610,27 @@
                         document.getElementById("Tank2PoundMile6").innerHTML = Tank2PoundMile6_val;
 
                         var Tank2SternHr6_val = (16000 / 4000) / Kn6;
+                        Tank2SternHr6_val=(Math.round(Tank2SternHr6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2SternHr6").style.color = "green";
                         document.getElementById("Tank2SternHr6").innerHTML = Tank2SternHr6_val;
 
                         var Tank2MecTotMile6_val = (Tank2ServiceHr6 + Tank2SternHr6_val + Tank2EngHr6) / Kn6;
+                        Tank2MecTotMile6_val=(Math.round(Tank2MecTotMile6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2MecTotMile6").style.color = "blue";
                         document.getElementById("Tank2MecTotMile6").innerHTML = Tank2MecTotMile6_val;
 
                         var Tank2TotCost6_val = Tank2MecTotMile6_val + Tank2PoundMile6_val;
+                        Tank2TotCost6_val=(Math.round(Tank2TotCost6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2TotCost6").style.color = "red";
                         document.getElementById("Tank2TotCost6").innerHTML = Tank2TotCost6_val;
 
-                        var Tank2TotCost6_val = Tank2MecTotMile6_val * Tank2PoundMile6_val;
-                        document.getElementById("Tank2TotCost6").style.color = "green";
-                        document.getElementById("Tank2TotCost6").innerHTML = Tank2TotCost6_val;
+                        var Tank2TotCost26_val = Tank2TotCost6_val * Journey;
+                        Tank2TotCost26_val=(Math.round(Tank2TotCost26_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank2TotCost26").style.color = "green";
+                        document.getElementById("Tank2TotCost26").innerHTML = Tank2TotCost26_val;
 
                         var Tank2Time6_val = Journey + Journey * Kn6;
+                        Tank2Time6_val=(Math.round(Tank2Time6_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2Time6").style.color = "blue";
                         document.getElementById("Tank2Time6").innerHTML = Tank2Time6_val;
 
@@ -2719,22 +2779,27 @@
                         document.getElementById("Tank1PoundMile7").innerHTML = Tank1PoundMile7_val;
 
                         var Tank1SternHr7_val = (16000 / 4000) / Kn7;
+                        Tank1SternHr7_val=(Math.round(Tank1SternHr7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1SternHr7").style.color = "green";
                         document.getElementById("Tank1SternHr7").innerHTML = Tank1SternHr7_val;
 
                         var Tank1MecTotMile7_val = (Tank1ServiceHr7 + Tank1SternHr7_val + Tank1EngHr7) / Kn7;
+                        Tank1MecTotMile7_val=(Math.round(Tank1MecTotMile7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1MecTotMile7").style.color = "blue";
                         document.getElementById("Tank1MecTotMile7").innerHTML = Tank1MecTotMile7_val;
 
                         var Tank1TotCost7_val = Tank1MecTotMile7_val + Tank1PoundMile7_val;
+                        Tank1TotCost7_val=(Math.round(Tank1TotCost7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1TotCost7").style.color = "red";
                         document.getElementById("Tank1TotCost7").innerHTML = Tank1TotCost7_val;
 
-                        var Tank1TotCost7_val = Tank1MecTotMile7_val * Tank1PoundMile7_val;
-                        document.getElementById("Tank1TotCost7").style.color = "green";
-                        document.getElementById("Tank1TotCost7").innerHTML = Tank1TotCost7_val;
+                        var Tank1TotCost27_val = Tank1TotCost7_val * Journey;
+                        Tank1TotCost27_val=(Math.round(Tank1TotCost27_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank1TotCost27").style.color = "green";
+                        document.getElementById("Tank1TotCost27").innerHTML = Tank1TotCost27_val;
 
                         var Tank1Time7_val = Journey + Journey * Kn7;
+                        Tank1Time7_val=(Math.round(Tank1Time7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank1Time7").style.color = "blue";
                         document.getElementById("Tank1Time7").innerHTML = Tank1Time7_val;
 
@@ -2820,22 +2885,27 @@
                         document.getElementById("Tank2PoundMile7").innerHTML = Tank2PoundMile7_val;
 
                         var Tank2SternHr7_val = (16000 / 4000) / Kn7;
+                        Tank2SternHr7_val=(Math.round(Tank2SternHr7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2SternHr7").style.color = "green";
                         document.getElementById("Tank2SternHr7").innerHTML = Tank2SternHr7_val;
 
                         var Tank2MecTotMile7_val = (Tank2ServiceHr7 + Tank2SternHr7_val + Tank2EngHr7) / Kn7;
+                        Tank2MecTotMile7_val=(Math.round(Tank2MecTotMile7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2MecTotMile7").style.color = "blue";
                         document.getElementById("Tank2MecTotMile7").innerHTML = Tank2MecTotMile7_val;
 
                         var Tank2TotCost7_val = Tank2MecTotMile7_val + Tank2PoundMile7_val;
+                        Tank2TotCost7_val=(Math.round(Tank2TotCost7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2TotCost7").style.color = "red";
                         document.getElementById("Tank2TotCost7").innerHTML = Tank2TotCost7_val;
 
-                        var Tank2TotCost7_val = Tank2MecTotMile7_val * Tank2PoundMile7_val;
-                        document.getElementById("Tank2TotCost7").style.color = "green";
-                        document.getElementById("Tank2TotCost7").innerHTML = Tank2TotCost7_val;
+                        var Tank2TotCost27_val = Tank2TotCost7_val * Journey;
+                        Tank2TotCost27_val=(Math.round(Tank2TotCost27_val * 100) / 100).toFixed(2);
+                        document.getElementById("Tank2TotCost27").style.color = "green";
+                        document.getElementById("Tank2TotCost27").innerHTML = Tank2TotCost27_val;
 
                         var Tank2Time7_val = Journey + Journey * Kn7;
+                        Tank2Time7_val=(Math.round(Tank2Time7_val * 100) / 100).toFixed(2);
                         document.getElementById("Tank2Time7").style.color = "blue";
                         document.getElementById("Tank2Time7").innerHTML = Tank2Time7_val;
 
