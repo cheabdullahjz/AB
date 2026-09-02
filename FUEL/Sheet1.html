@@ -1135,12 +1135,25 @@
                         document.getElementById("Tank1MecTotMile1").innerHTML = Tank1MecTotMile1_val;
 
                         var Tank1TotCost1_val = parseInt(Tank1MecTotMile1_val) + parseInt(Tank1PoundMile1_val);
-                        Tank1TotCost1_val=(Math.round(Tank1TotCost1_val * 100) / 100).toFixed(2);  
+
+                        console.log(" 1 ",Tank1TotCost1_val,parseInt(Tank1MecTotMile1_val),parseInt(Tank1PoundMile1_val));
+
+                        Tank1TotCost1_val=(Math.round(Tank1TotCost1_val * 100) / 100).toFixed(2); 
+
+                        console.log(" 2 ",Tank1TotCost1_val);
+                        
+                        
                         document.getElementById("Tank1TotCost1").style.color = "red";
                         document.getElementById("Tank1TotCost1").innerHTML = Tank1TotCost1_val;
 
                         var Tank1TotCost12_val = Tank1TotCost1_val * Journey;
+
+                        console.log(" 3 ",Tank1TotCost12_val,Journey);
+
                         Tank1TotCost12_val=(Math.round(Tank1TotCost12_val * 100) / 100).toFixed(2);  
+
+                        console.log(" 4 ",Tank1TotCost12_val);
+
                         document.getElementById("Tank1TotCost12").style.color = "green";
                         document.getElementById("Tank1TotCost12").innerHTML = Tank1TotCost12_val;
 
