@@ -1035,7 +1035,13 @@
                     PercentUsed1_val=(Math.round(PercentUsed1_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed1").innerHTML = PercentUsed1_val;
 
-                    var Burned1_val = TotalFuel - Remaining1;
+                    
+
+                    var Remaining1_val = TotalFuel-(TotalFuel*PercentUsed1_val);
+                    Remaining1_val=(Math.round(Remaining1_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining1").innerHTML = Remaining1_val;
+
+                    var Burned1_val = TotalFuel - Remaining1_val;
                     currentRow.querySelector("#Burned1").innerHTML = Burned1_val;
 
                     var Time1_val = Journey / Kn1;
@@ -1329,7 +1335,12 @@
                     PercentUsed2_val=(Math.round(PercentUsed2_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed2").innerHTML = PercentUsed2_val;
 
-                    var Burned2_val = TotalFuel - Remaining2;
+
+                    var Remaining2_val = TotalFuel-(TotalFuel*PercentUsed2_val);
+                    Remaining2_val=(Math.round(Remaining2_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining2").innerHTML = Remaining2_val;
+
+                    var Burned2_val = TotalFuel - Remaining2_val;
                     currentRow.querySelector("#Burned2").innerHTML = Burned2_val;
 
                     var Time2_val = Journey / Kn2;
@@ -1616,7 +1627,12 @@
                     PercentUsed3_val=(Math.round(PercentUsed3_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed3").innerHTML = PercentUsed3_val;
 
-                    var Burned3_val = TotalFuel - Remaining3;
+
+                    var Remaining3_val = TotalFuel-(TotalFuel*PercentUsed3_val);
+                    Remaining3_val=(Math.round(Remaining3_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining3").innerHTML = Remaining3_val;
+
+                    var Burned3_val = TotalFuel - Remaining3_val;
                     currentRow.querySelector("#Burned3").innerHTML = Burned3_val;
 
                     var Time3_val = Journey / Kn3;
@@ -1902,7 +1918,13 @@
                     PercentUsed4_val=(Math.round(PercentUsed4_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed4").innerHTML = PercentUsed4_val;
 
-                    var Burned4_val = TotalFuel - Remaining4;
+
+                    var Remaining4_val = TotalFuel-(TotalFuel*PercentUsed4_val);
+                    Remaining4_val=(Math.round(Remaining4_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining4").innerHTML = Remaining4_val;
+
+                    var Burned4_val = TotalFuel - Remaining4_val;
+
                     currentRow.querySelector("#Burned4").innerHTML = Burned4_val;
 
                     var Time4_val = Journey / Kn4;
@@ -2183,7 +2205,11 @@
                     PercentUsed5_val=(Math.round(PercentUsed5_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed5").innerHTML = PercentUsed5_val;
 
-                    var Burned5_val = TotalFuel - Remaining5;
+                    var Remaining5_val = TotalFuel-(TotalFuel*PercentUsed5_val);
+                    Remaining5_val=(Math.round(Remaining5_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining5").innerHTML = Remaining5_val;
+
+                    var Burned5_val = TotalFuel - Remaining5_val;
                     currentRow.querySelector("#Burned5").innerHTML = Burned5_val;
 
                     var Time5_val = Journey / Kn5;
@@ -2466,7 +2492,12 @@
                     PercentUsed6_val=(Math.round(PercentUsed6_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed6").innerHTML = PercentUsed6_val;
 
-                    var Burned6_val = TotalFuel - Remaining6;
+
+                    var Remaining6_val = TotalFuel-(TotalFuel*PercentUsed6_val);
+                    Remaining6_val=(Math.round(Remaining6_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining6").innerHTML = Remaining6_val;
+
+                    var Burned6_val = TotalFuel - Remaining6_val;
                     currentRow.querySelector("#Burned6").innerHTML = Burned6_val;
 
                     var Time6_val = Journey / Kn6;
@@ -2745,7 +2776,11 @@
                     PercentUsed7_val=(Math.round(PercentUsed7_val * 100) / 100).toFixed(2);
                     currentRow.querySelector("#PercentUsed7").innerHTML = PercentUsed7_val;
 
-                    var Burned7_val = TotalFuel - Remaining7;
+                    var Remaining7_val = TotalFuel-(TotalFuel*PercentUsed7_val);
+                    Remaining7_val=(Math.round(Remaining7_val * 100) / 100).toFixed(2);
+                    currentRow.querySelector("#Remaining7").innerHTML = Remaining7_val;
+
+                    var Burned7_val = TotalFuel - Remaining7_val;
                     currentRow.querySelector("#Burned7").innerHTML = Burned7_val;
 
                     var Time7_val = Journey / Kn7;
